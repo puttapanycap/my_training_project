@@ -1,69 +1,88 @@
-<html>
+<!DOCTYPE html>
+<html lang="th">
 
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Landing Page — Aurora Glass</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
         rel="stylesheet">
-    <!-- bootstrap -->
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body>
+<body class="aurora-body">
 
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <!-- Aurora background layers (animated gradient blobs) -->
+    <div class="aurora-bg" aria-hidden="true">
+        <div class="aurora-blob aurora-blob-1"></div>
+        <div class="aurora-blob aurora-blob-2"></div>
+        <div class="aurora-blob aurora-blob-3"></div>
+        <div class="aurora-blob aurora-blob-4"></div>
+        <div class="aurora-noise"></div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg aurora-navbar sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-users-line"></i>
+            <a class="navbar-brand aurora-brand" href="#">
+                <span class="brand-mark"><i class="fas fa-users-line"></i></span>
                 <span data-i18n data-th="คิวอัจฉริยะ" data-en="Smart Queue">คิวอัจฉริยะ</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler aurora-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">
-                            <i class="fas fa-star"></i><span data-i18n data-th="ฟีเจอร์"
-                                data-en="Features">ฟีเจอร์</span>
+                        <a class="nav-link aurora-nav-link" href="#features">
+                            <i class="fas fa-star"></i>
+                            <span data-i18n data-th="ฟีเจอร์" data-en="Features">ฟีเจอร์</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pricing">
-                            <i class="fas fa-tags"></i><span data-i18n data-th="ราคา" data-en="Pricing">ราคา</span>
+                        <a class="nav-link aurora-nav-link" href="#pricing">
+                            <i class="fas fa-tags"></i>
+                            <span data-i18n data-th="ราคา" data-en="Pricing">ราคา</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-right-to-bracket"></i><span data-i18n data-th="เข้าสู่ระบบ"
-                                data-en="Login">เข้าสู่ระบบ</span>
+                        <a class="nav-link aurora-nav-link" href="#">
+                            <i class="fas fa-right-to-bracket"></i>
+                            <span data-i18n data-th="เข้าสู่ระบบ" data-en="Login">เข้าสู่ระบบ</span>
                         </a>
                     </li>
                     <li class="nav-item ms-lg-2">
-                        <a class="btn btn-light btn-sm rounded-pill px-3 fw-semibold shadow-sm" href="#pricing">
-                            <i class="fas fa-rocket me-1"></i><span data-i18n data-th="สมัครใช้งาน"
-                                data-en="Get Started">สมัครใช้งาน</span>
+                        <a class="btn aurora-btn aurora-btn-glow aurora-btn-sm" href="#pricing">
+                            <i class="fas fa-rocket me-1"></i>
+                            <span data-i18n data-th="สมัครใช้งาน" data-en="Get Started">สมัครใช้งาน</span>
                         </a>
                     </li>
                     <li class="nav-item dropdown lang-switcher">
-                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                        <a class="nav-link aurora-nav-link aurora-lang-toggle" href="#" id="langDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language switcher">
-                            <i class="fas fa-globe"></i><span id="currentLangLabel">TH</span>
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLangLabel">TH</span>
+                            <i class="fas fa-chevron-down lang-caret"></i>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                        <ul class="dropdown-menu aurora-dropdown" aria-labelledby="langDropdown">
                             <li>
                                 <a class="dropdown-item lang-switch" href="#" data-lang="th">
-                                    <span class="flag">🇹🇭</span> ไทย
+                                    <span class="flag">🇹🇭</span> ภาษาไทย
                                 </a>
                             </li>
                             <li>
@@ -78,17 +97,23 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section d-flex align-items-center text-white text-center"
-        style="min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-        <div class="container">
+    <!-- ================= HERO ================= -->
+    <section class="aurora-hero">
+        <div class="container hero-container">
             <div class="row align-items-center justify-content-center g-5">
                 <div class="col-lg-7 text-lg-start text-center">
-                    <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
-                        <i class="fas fa-users-line me-3"></i><span data-i18n data-th="ระบบจัดการคิวอัจฉริยะ"
+                    <span class="hero-eyebrow animate__animated animate__fadeInDown">
+                        <span class="eyebrow-dot"></span>
+                        <span data-i18n data-th="Next-Gen Queue Management"
+                            data-en="Next-Gen Queue Management">Next-Gen Queue Management</span>
+                    </span>
+                    <h1 class="hero-title animate__animated animate__fadeInDown">
+                        <span data-i18n data-th="ระบบจัดการคิวอัจฉริยะ"
                             data-en="Smart Queue System">ระบบจัดการคิวอัจฉริยะ</span>
+                        <span class="hero-title-gradient" data-i18n data-th="ที่ลื่นไหลกว่าเดิม"
+                            data-en="made fluid.">ที่ลื่นไหลกว่าเดิม</span>
                     </h1>
-                    <p class="lead fs-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <p class="hero-lead animate__animated animate__fadeInUp animate__delay-1s">
                         <span data-i18n
                             data-th="ลาก่อนการรอคอยนานๆ ระบบจัดการคิวอัจฉริยะของเราช่วยเพิ่มประสิทธิภาพ ลดเวลารอ และทำให้ลูกค้าของคุณมีความสุข"
                             data-en="Say goodbye to long waits. Our intelligent queue management system streamlines your flow, reduces wait times, and keeps your customers happy.">ลาก่อนการรอคอยนานๆ
@@ -96,197 +121,251 @@
                             และทำให้ลูกค้าของคุณมีความสุข</span>
                     </p>
                     <div
-                        class="d-flex justify-content-lg-start justify-content-center gap-3 animate__animated animate__fadeInUp animate__delay-2s">
-                        <a href="#features" class="btn btn-light btn-lg px-5 py-3 fw-semibold rounded-pill shadow">
-                            <i class="fas fa-play-circle me-2"></i><span data-i18n data-th="เริ่มต้นใช้งาน"
-                                data-en="Get Started">เริ่มต้นใช้งาน</span>
+                        class="d-flex justify-content-lg-start justify-content-center gap-3 hero-cta animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="#features" class="btn aurora-btn aurora-btn-primary aurora-btn-glow">
+                            <i class="fas fa-play-circle me-2"></i>
+                            <span data-i18n data-th="เริ่มต้นใช้งาน" data-en="Get Started">เริ่มต้นใช้งาน</span>
                         </a>
-                        <a href="#pricing" class="btn btn-outline-light btn-lg px-5 py-3 fw-semibold rounded-pill">
-                            <i class="fas fa-info-circle me-2"></i><span data-i18n data-th="เรียนรู้เพิ่มเติม"
-                                data-en="Learn More">เรียนรู้เพิ่มเติม</span>
+                        <a href="#pricing" class="btn aurora-btn aurora-btn-ghost">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <span data-i18n data-th="เรียนรู้เพิ่มเติม" data-en="Learn More">เรียนรู้เพิ่มเติม</span>
                         </a>
                     </div>
+
+                    <div class="hero-trust animate__animated animate__fadeIn animate__delay-3s">
+                        <div class="trust-avatars">
+                            <span class="avatar a1">A</span>
+                            <span class="avatar a2">K</span>
+                            <span class="avatar a3">P</span>
+                            <span class="avatar a4">+</span>
+                        </div>
+                        <div class="trust-text">
+                            <div class="trust-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <small data-i18n data-th="ไว้วางใจจาก 2,000+ ธุรกิจ"
+                                data-en="Trusted by 2,000+ businesses">ไว้วางใจจาก 2,000+ ธุรกิจ</small>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="col-lg-5 text-center animate__animated animate__fadeIn animate__delay-2s">
-                    <img src="./assets/hero.png" alt="Smart Queue System" class="img-fluid hero-image">
+                    <div class="hero-visual">
+                        <div class="hero-glow"></div>
+                        <div class="hero-card-stack">
+                            <div class="floating-card fc-1">
+                                <div class="fc-icon"><i class="fas fa-clock"></i></div>
+                                <div>
+                                    <div class="fc-label" data-i18n data-th="เวลารอเฉลี่ย"
+                                        data-en="Avg. wait time">เวลารอเฉลี่ย</div>
+                                    <div class="fc-value">3.2 <small>นาที</small></div>
+                                </div>
+                            </div>
+                            <div class="floating-card fc-2">
+                                <div class="fc-icon green"><i class="fas fa-arrow-trend-up"></i></div>
+                                <div>
+                                    <div class="fc-label" data-i18n data-th="คิววันนี้"
+                                        data-en="Today's queue">คิววันนี้</div>
+                                    <div class="fc-value">128</div>
+                                </div>
+                            </div>
+                            <div class="floating-card fc-3">
+                                <div class="fc-icon purple"><i class="fas fa-face-smile"></i></div>
+                                <div>
+                                    <div class="fc-label" data-i18n data-th="ความพึงพอใจ"
+                                        data-en="Satisfaction">ความพึงพอใจ</div>
+                                    <div class="fc-value">98%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="features" class="row mt-5 pt-4 animate__animated animate__fadeIn animate__delay-3s">
-                <div class="col-md-4 mb-3">
-                    <div class="p-3">
-                        <i class="fas fa-clock fa-2x mb-2"></i>
-                        <h5 class="fw-bold"><span data-i18n data-th="ลดเวลารอคอย"
+
+            <!-- Features highlight row -->
+            <div id="features" class="row mt-5 pt-4 g-3 animate__animated animate__fadeIn animate__delay-3s">
+                <div class="col-md-4">
+                    <div class="aurora-feature-tile">
+                        <div class="tile-icon tile-1"><i class="fas fa-clock"></i></div>
+                        <h5 class="fw-bold mb-1"><span data-i18n data-th="ลดเวลารอคอย"
                                 data-en="Reduce Wait Time">ลดเวลารอคอย</span></h5>
-                        <p class="mb-0 opacity-75"><span data-i18n data-th="คิวสั้นลงสูงสุด 60%"
+                        <p class="mb-0"><span data-i18n data-th="คิวสั้นลงสูงสุด 60%"
                                 data-en="Up to 60% shorter queues">คิวสั้นลงสูงสุด 60%</span></p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div class="p-3">
-                        <i class="fas fa-chart-line fa-2x mb-2"></i>
-                        <h5 class="fw-bold"><span data-i18n data-th="วิเคราะห์แบบเรียลไทม์"
+                <div class="col-md-4">
+                    <div class="aurora-feature-tile">
+                        <div class="tile-icon tile-2"><i class="fas fa-chart-line"></i></div>
+                        <h5 class="fw-bold mb-1"><span data-i18n data-th="วิเคราะห์แบบเรียลไทม์"
                                 data-en="Real-Time Analytics">วิเคราะห์แบบเรียลไทม์</span></h5>
-                        <p class="mb-0 opacity-75"><span data-i18n data-th="ตรวจสอบและปรับปรุงได้ทันที"
+                        <p class="mb-0"><span data-i18n data-th="ตรวจสอบและปรับปรุงได้ทันที"
                                 data-en="Monitor and optimize instantly">ตรวจสอบและปรับปรุงได้ทันที</span></p>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div class="p-3">
-                        <i class="fas fa-mobile-screen fa-2x mb-2"></i>
-                        <h5 class="fw-bold"><span data-i18n data-th="รองรับมือถือ"
+                <div class="col-md-4">
+                    <div class="aurora-feature-tile">
+                        <div class="tile-icon tile-3"><i class="fas fa-mobile-screen"></i></div>
+                        <h5 class="fw-bold mb-1"><span data-i18n data-th="รองรับมือถือ"
                                 data-en="Mobile Ready">รองรับมือถือ</span></h5>
-                        <p class="mb-0 opacity-75"><span data-i18n data-th="จองคิวได้จากทุกที่"
+                        <p class="mb-0"><span data-i18n data-th="จองคิวได้จากทุกที่"
                                 data-en="Join queues from anywhere">จองคิวได้จากทุกที่</span></p>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-        </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section py-5 bg-light">
+    <!-- ================= PRICING ================= -->
+    <section id="pricing" class="aurora-pricing">
         <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="display-4 fw-bold mb-3">
-                    <i class="fas fa-tags text-primary me-2"></i><span data-i18n data-th="แผนราคาของเรา"
-                        data-en="Our Pricing Plans">แผนราคาของเรา</span>
+            <div class="text-center mb-5 pricing-header">
+                <span class="hero-eyebrow eyebrow-dark mx-auto">
+                    <span class="eyebrow-dot"></span>
+                    <span data-i18n data-th="แผนราคา" data-en="Pricing">แผนราคา</span>
+                </span>
+                <h2 class="section-title">
+                    <span data-i18n data-th="แผนราคาของเรา" data-en="Our Pricing Plans">แผนราคาของเรา</span>
                 </h2>
-                <p class="lead text-muted">
+                <p class="section-sub">
                     <span data-i18n data-th="เลือกแผนที่เหมาะกับธุรกิจของคุณ"
                         data-en="Choose the plan that fits your business">เลือกแผนที่เหมาะกับธุรกิจของคุณ</span>
                 </p>
             </div>
+
             <div class="row g-4 justify-content-center">
-                <!-- Basic Plan -->
+                <!-- Basic -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card pricing-card h-100 border-0 shadow-sm animate__animated animate__fadeInUp">
-                        <div class="card-body p-5 text-center">
-                            <div class="pricing-icon mb-3">
-                                <i class="fas fa-seedling fa-3x text-success"></i>
+                    <div class="glass-pricing-card animate__animated animate__fadeInUp">
+                        <div class="card-glow"></div>
+                        <div class="card-body p-5">
+                            <div class="pricing-icon-wrap icon-1">
+                                <i class="fas fa-seedling"></i>
                             </div>
-                            <h4 class="fw-bold mb-3">
-                                <span data-i18n data-th="เบสิก" data-en="Basic">เบสิก</span>
-                            </h4>
-                            <div class="pricing-price mb-4">
-                                <span class="display-4 fw-bold text-primary">฿499</span>
-                                <span class="text-muted">/<span data-i18n data-th="เดือน"
+                            <h4 class="fw-bold mb-1"><span data-i18n data-th="เบสิก" data-en="Basic">เบสิก</span></h4>
+                            <p class="plan-tag" data-i18n data-th="สำหรับธุรกิจเริ่มต้น"
+                                data-en="For starter businesses">สำหรับธุรกิจเริ่มต้น</p>
+                            <div class="pricing-price">
+                                <span class="price-amount">฿499</span>
+                                <span class="price-period">/<span data-i18n data-th="เดือน"
                                         data-en="month">เดือน</span></span>
                             </div>
-                            <ul class="list-unstyled mb-4 text-start">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="คิวสูงสุด 100 คิว/วัน" data-en="Up to 100 queues/day">คิวสูงสุด 100
-                                        คิว/วัน</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="รองรับ 1 สาขา" data-en="1 branch support">รองรับ 1 สาขา</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="รายงานพื้นฐาน" data-en="Basic reports">รายงานพื้นฐาน</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="อีเมลซัพพอร์ต" data-en="Email support">อีเมลซัพพอร์ต</span></li>
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="คิวสูงสุด 100 คิว/วัน"
+                                        data-en="Up to 100 queues/day">คิวสูงสุด 100 คิว/วัน</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="รองรับ 1 สาขา"
+                                        data-en="1 branch support">รองรับ 1 สาขา</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="รายงานพื้นฐาน"
+                                        data-en="Basic reports">รายงานพื้นฐาน</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="อีเมลซัพพอร์ต"
+                                        data-en="Email support">อีเมลซัพพอร์ต</span></li>
                             </ul>
-                            <a href="#contact" class="btn btn-outline-primary btn-lg w-100 rounded-pill">
-                                <i class="fas fa-cart-plus me-2"></i><span data-i18n data-th="เลือกแผนนี้"
-                                    data-en="Choose Plan">เลือกแผนนี้</span>
+                            <a href="#contact" class="btn aurora-btn aurora-btn-outline w-100">
+                                <i class="fas fa-cart-plus me-2"></i>
+                                <span data-i18n data-th="เลือกแผนนี้" data-en="Choose Plan">เลือกแผนนี้</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <!-- Pro Plan -->
+
+                <!-- Pro -->
                 <div class="col-lg-4 col-md-6">
                     <div
-                        class="card pricing-card h-100 border-0 shadow-lg animate__animated animate__fadeInUp animate__delay-1s position-relative">
-                        <span
-                            class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle px-3 py-2 rounded-pill">
-                            <i class="fas fa-star me-1"></i><span data-i18n data-th="แนะนำ"
-                                data-en="Popular">แนะนำ</span>
+                        class="glass-pricing-card glass-pricing-pro animate__animated animate__fadeInUp animate__delay-1s">
+                        <div class="card-glow pro-glow"></div>
+                        <span class="popular-badge">
+                            <i class="fas fa-star me-1"></i>
+                            <span data-i18n data-th="แนะนำ" data-en="Popular">แนะนำ</span>
                         </span>
-                        <div class="card-body p-5 text-center">
-                            <div class="pricing-icon mb-3">
-                                <i class="fas fa-rocket fa-3x text-primary"></i>
+                        <div class="card-body p-5">
+                            <div class="pricing-icon-wrap icon-2">
+                                <i class="fas fa-rocket"></i>
                             </div>
-                            <h4 class="fw-bold mb-3">
-                                <span data-i18n data-th="โปร" data-en="Pro">โปร</span>
-                            </h4>
-                            <div class="pricing-price mb-4">
-                                <span class="display-4 fw-bold text-primary">฿1,499</span>
-                                <span class="text-muted">/<span data-i18n data-th="เดือน"
+                            <h4 class="fw-bold mb-1"><span data-i18n data-th="โปร" data-en="Pro">โปร</span></h4>
+                            <p class="plan-tag" data-i18n data-th="สำหรับธุรกิจที่กำลังเติบโต"
+                                data-en="For growing businesses">สำหรับธุรกิจที่กำลังเติบโต</p>
+                            <div class="pricing-price">
+                                <span class="price-amount">฿1,499</span>
+                                <span class="price-period">/<span data-i18n data-th="เดือน"
                                         data-en="month">เดือน</span></span>
                             </div>
-                            <ul class="list-unstyled mb-4 text-start">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="คิวไม่จำกัด" data-en="Unlimited queues">คิวไม่จำกัด</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="รองรับ 5 สาขา" data-en="Up to 5 branches">รองรับ 5 สาขา</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="คิวไม่จำกัด"
+                                        data-en="Unlimited queues">คิวไม่จำกัด</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="รองรับ 5 สาขา"
+                                        data-en="Up to 5 branches">รองรับ 5 สาขา</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n
                                         data-th="รายงานขั้นสูง & เรียลไทม์"
                                         data-en="Advanced real-time reports">รายงานขั้นสูง & เรียลไทม์</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="ซัพพอร์ต 24/7" data-en="24/7 support">ซัพพอร์ต 24/7</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="ปรับแต่งแบรนด์ได้" data-en="Custom branding">ปรับแต่งแบรนด์ได้</span>
-                                </li>
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="ซัพพอร์ต 24/7"
+                                        data-en="24/7 support">ซัพพอร์ต 24/7</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="ปรับแต่งธีมและโลโก้"
+                                        data-en="Custom theme & logo">ปรับแต่งธีมและโลโก้</span></li>
                             </ul>
-                            <a href="#contact" class="btn btn-primary btn-lg w-100 rounded-pill shadow">
-                                <i class="fas fa-cart-plus me-2"></i><span data-i18n data-th="เลือกแผนนี้"
-                                    data-en="Choose Plan">เลือกแผนนี้</span>
+                            <a href="#contact" class="btn aurora-btn aurora-btn-primary aurora-btn-glow w-100">
+                                <i class="fas fa-cart-plus me-2"></i>
+                                <span data-i18n data-th="เลือกแผนนี้" data-en="Choose Plan">เลือกแผนนี้</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                <!-- Enterprise Plan -->
+
+                <!-- Enterprise -->
                 <div class="col-lg-4 col-md-6">
-                    <div
-                        class="card pricing-card h-100 border-0 shadow-sm animate__animated animate__fadeInUp animate__delay-2s">
-                        <div class="card-body p-5 text-center">
-                            <div class="pricing-icon mb-3">
-                                <i class="fas fa-building fa-3x text-dark"></i>
+                    <div class="glass-pricing-card animate__animated animate__fadeInUp animate__delay-2s">
+                        <div class="card-glow"></div>
+                        <div class="card-body p-5">
+                            <div class="pricing-icon-wrap icon-3">
+                                <i class="fas fa-building"></i>
                             </div>
-                            <h4 class="fw-bold mb-3">
-                                <span data-i18n data-th="องค์กร" data-en="Enterprise">องค์กร</span>
+                            <h4 class="fw-bold mb-1"><span data-i18n data-th="องค์กร" data-en="Enterprise">องค์กร</span>
                             </h4>
-                            <div class="pricing-price mb-4">
-                                <span class="display-4 fw-bold text-primary"><span data-i18n data-th="ติดต่อเรา"
-                                        data-en="Contact Us">ติดต่อเรา</span></span>
+                            <p class="plan-tag" data-i18n data-th="สำหรับองค์กรขนาดใหญ่"
+                                data-en="For large organizations">สำหรับองค์กรขนาดใหญ่</p>
+                            <div class="pricing-price">
+                                <span class="price-amount price-text" data-i18n data-th="ติดต่อเรา"
+                                    data-en="Contact us">ติดต่อเรา</span>
                             </div>
-                            <ul class="list-unstyled mb-4 text-start">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="ทุกฟีเจอร์ในแผนโปร"
+                            <ul class="plan-features">
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="ทุกฟีเจอร์ในแผนโปร"
                                         data-en="All Pro features">ทุกฟีเจอร์ในแผนโปร</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="สาขาไม่จำกัด" data-en="Unlimited branches">สาขาไม่จำกัด</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="API และ Webhook" data-en="API & Webhooks">API และ Webhook</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="เจ้าหน้าที่ดูแลเฉพาะ"
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="สาขาไม่จำกัด"
+                                        data-en="Unlimited branches">สาขาไม่จำกัด</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="API และ Webhook"
+                                        data-en="API & Webhooks">API และ Webhook</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="เจ้าหน้าที่ดูแลเฉพาะ"
                                         data-en="Dedicated account manager">เจ้าหน้าที่ดูแลเฉพาะ</span></li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
-                                        data-th="SLA รับประกัน" data-en="SLA guarantee">SLA รับประกัน</span></li>
+                                <li><i class="fas fa-check"></i> <span data-i18n data-th="SLA ระดับองค์กร"
+                                        data-en="Enterprise SLA">SLA ระดับองค์กร</span></li>
                             </ul>
-                            <a href="#contact" class="btn btn-dark btn-lg w-100 rounded-pill">
-                                <i class="fas fa-envelope me-2"></i><span data-i18n data-th="ติดต่อฝ่ายขาย"
-                                    data-en="Contact Sales">ติดต่อฝ่ายขาย</span>
+                            <a href="#contact" class="btn aurora-btn aurora-btn-dark w-100">
+                                <i class="fas fa-envelope me-2"></i>
+                                <span data-i18n data-th="ติดต่อฝ่ายขาย" data-en="Contact Sales">ติดต่อฝ่ายขาย</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Comparison Table -->
-            <div class="comparison-table-wrapper mt-5 pt-4 animate__animated animate__fadeInUp">
-                <div class="text-center mb-4">
-                    <h3 class="fw-bold mb-2">
-                        <i class="fas fa-table-list text-primary me-2"></i><span data-i18n
-                            data-th="ตารางเปรียบเทียบแพ็กเกจ" data-en="Package Comparison Table">ตารางเปรียบเทียบแพ็กเกจ</span>
+            <!-- ===== Comparison Table ===== -->
+            <div class="comparison-wrapper mt-5 pt-4 animate__animated animate__fadeInUp">
+                <div class="text-center mb-4 pricing-header">
+                    <span class="hero-eyebrow eyebrow-dark mx-auto">
+                        <span class="eyebrow-dot"></span>
+                        <span data-i18n data-th="เปรียบเทียบ" data-en="Compare">เปรียบเทียบ</span>
+                    </span>
+                    <h3 class="section-title-sm">
+                        <i class="fas fa-table-list me-2"></i>
+                        <span data-i18n data-th="ตารางเปรียบเทียบแพ็กเกจ"
+                            data-en="Package Comparison Table">ตารางเปรียบเทียบแพ็กเกจ</span>
                     </h3>
-                    <p class="text-muted mb-0">
+                    <p class="section-sub">
                         <span data-i18n
                             data-th="เปรียบเทียบฟีเจอร์ทั้งหมดเพื่อเลือกแผนที่เหมาะกับคุณมากที่สุด"
                             data-en="Compare all features side-by-side to pick the plan that fits you best">เปรียบเทียบฟีเจอร์ทั้งหมดเพื่อเลือกแผนที่เหมาะกับคุณมากที่สุด</span>
                     </p>
                 </div>
 
-                <!-- Category Filter -->
                 <ul class="nav nav-pills justify-content-center flex-wrap gap-2 comparison-filter mb-4"
                     id="comparisonFilter" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -333,97 +412,90 @@
                     </li>
                 </ul>
 
-                <div class="comparison-table-scroll shadow-lg rounded-4 overflow-hidden bg-white">
+                <div class="comparison-table-scroll glass-comparison">
                     <table class="table align-middle mb-0 comparison-table">
                         <thead>
                             <tr class="text-white text-center">
                                 <th scope="col" class="text-start ps-4 feature-col">
-                                    <i class="fas fa-list-check me-2"></i><span data-i18n data-th="ฟีเจอร์"
-                                        data-en="Feature">ฟีเจอร์</span>
+                                    <span data-i18n data-th="ฟีเจอร์" data-en="Feature">ฟีเจอร์</span>
                                 </th>
                                 <th scope="col" class="plan-col">
                                     <div class="plan-header">
-                                        <i class="fas fa-seedling plan-icon text-success"></i>
-                                        <div class="plan-name"><span data-i18n data-th="เบสิก"
-                                                data-en="Basic">เบสิก</span></div>
-                                        <small class="plan-price">฿499/<span data-i18n data-th="เดือน"
-                                                data-en="month">เดือน</span></small>
+                                        <i class="fas fa-seedling plan-icon plan-icon-1"></i>
+                                        <span class="plan-name" data-i18n data-th="เบสิก" data-en="Basic">เบสิก</span>
+                                        <span class="plan-price">฿499/<span data-i18n data-th="เดือน"
+                                                data-en="mo">เดือน</span></span>
                                     </div>
                                 </th>
                                 <th scope="col" class="plan-col plan-col-pro">
-                                    <div class="ribbon">
-                                        <i class="fas fa-star"></i>
-                                        <span data-i18n data-th="แนะนำ" data-en="POPULAR">แนะนำ</span>
-                                    </div>
                                     <div class="plan-header">
-                                        <i class="fas fa-rocket plan-icon text-primary"></i>
-                                        <div class="plan-name"><span data-i18n data-th="โปร"
-                                                data-en="Pro">โปร</span></div>
-                                        <small class="plan-price">฿1,499/<span data-i18n data-th="เดือน"
-                                                data-en="month">เดือน</span></small>
+                                        <i class="fas fa-rocket plan-icon plan-icon-2"></i>
+                                        <span class="plan-name" data-i18n data-th="โปร" data-en="Pro">โปร</span>
+                                        <span class="plan-price">฿1,499/<span data-i18n data-th="เดือน"
+                                                data-en="mo">เดือน</span></span>
                                     </div>
                                 </th>
                                 <th scope="col" class="plan-col">
                                     <div class="plan-header">
-                                        <i class="fas fa-building plan-icon text-dark"></i>
-                                        <div class="plan-name"><span data-i18n data-th="องค์กร"
-                                                data-en="Enterprise">องค์กร</span></div>
-                                        <small class="plan-price"><span data-i18n data-th="ติดต่อเรา"
-                                                data-en="Contact Us">ติดต่อเรา</span></small>
+                                        <i class="fas fa-building plan-icon plan-icon-3"></i>
+                                        <span class="plan-name" data-i18n data-th="องค์กร"
+                                            data-en="Enterprise">องค์กร</span>
+                                        <span class="plan-price" data-i18n data-th="ติดต่อเรา"
+                                            data-en="Contact us">ติดต่อเรา</span>
                                     </div>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Core Features -->
+                            <!-- Core -->
                             <tr class="category-row" data-category="core">
                                 <td colspan="4" class="category-cell">
-                                    <span class="category-badge"><i class="fas fa-cube"></i></span>
+                                    <i class="fas fa-cube category-badge"></i>
                                     <span data-i18n data-th="ฟีเจอร์หลัก" data-en="Core Features">ฟีเจอร์หลัก</span>
                                 </td>
                             </tr>
                             <tr data-category="core">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-list-ol text-muted"></i>
-                                    <span data-i18n data-th="จำนวนคิวต่อวัน" data-en="Queues per day">จำนวนคิวต่อวัน</span>
+                                    <i class="fas fa-list-ol"></i>
+                                    <span data-i18n data-th="จำนวนคิวต่อวัน" data-en="Daily queue limit">จำนวนคิวต่อวัน</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-neutral"><span data-i18n
                                             data-th="100 คิว" data-en="100 queues">100 คิว</span></span></td>
-                                <td class="text-center plan-col-pro"><span class="value-pill value-success"><i
+                                <td class="text-center plan-col-pro"><span class="value-pill value-primary"><i
                                             class="fas fa-infinity"></i> <span data-i18n data-th="ไม่จำกัด"
                                             data-en="Unlimited">ไม่จำกัด</span></span></td>
-                                <td class="text-center"><span class="value-pill value-success"><i
+                                <td class="text-center"><span class="value-pill value-primary"><i
                                             class="fas fa-infinity"></i> <span data-i18n data-th="ไม่จำกัด"
                                             data-en="Unlimited">ไม่จำกัด</span></span></td>
                             </tr>
                             <tr data-category="core">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-store text-muted"></i>
-                                    <span data-i18n data-th="จำนวนสาขา" data-en="Number of branches">จำนวนสาขา</span>
+                                    <i class="fas fa-store"></i>
+                                    <span data-i18n data-th="จำนวนสาขา" data-en="Branches">จำนวนสาขา</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-neutral">1</span></td>
                                 <td class="text-center plan-col-pro"><span class="value-pill value-primary">5</span>
                                 </td>
-                                <td class="text-center"><span class="value-pill value-success"><i
+                                <td class="text-center"><span class="value-pill value-primary"><i
                                             class="fas fa-infinity"></i> <span data-i18n data-th="ไม่จำกัด"
                                             data-en="Unlimited">ไม่จำกัด</span></span></td>
                             </tr>
                             <tr data-category="core">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-users text-muted"></i>
-                                    <span data-i18n data-th="จำนวนพนักงาน" data-en="Staff accounts">จำนวนพนักงาน</span>
+                                    <i class="fas fa-user-tie"></i>
+                                    <span data-i18n data-th="เจ้าหน้าที่" data-en="Staff accounts">เจ้าหน้าที่</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-neutral">3</span></td>
                                 <td class="text-center plan-col-pro"><span class="value-pill value-primary">15</span>
                                 </td>
-                                <td class="text-center"><span class="value-pill value-success"><i
+                                <td class="text-center"><span class="value-pill value-primary"><i
                                             class="fas fa-infinity"></i> <span data-i18n data-th="ไม่จำกัด"
                                             data-en="Unlimited">ไม่จำกัด</span></span></td>
                             </tr>
                             <tr data-category="core">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-mobile-screen text-muted"></i>
-                                    <span data-i18n data-th="แอปมือถือ" data-en="Mobile app">แอปมือถือ</span>
+                                    <i class="fas fa-mobile-screen"></i>
+                                    <span data-i18n data-th="รองรับมือถือ" data-en="Mobile ready">รองรับมือถือ</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-success"><i
                                             class="fas fa-check"></i></span></td>
@@ -433,17 +505,17 @@
                                             class="fas fa-check"></i></span></td>
                             </tr>
 
-                            <!-- Reporting & Analytics -->
+                            <!-- Reports -->
                             <tr class="category-row" data-category="reports">
                                 <td colspan="4" class="category-cell">
-                                    <span class="category-badge"><i class="fas fa-chart-line"></i></span>
+                                    <i class="fas fa-chart-line category-badge"></i>
                                     <span data-i18n data-th="รายงานและการวิเคราะห์"
                                         data-en="Reports & Analytics">รายงานและการวิเคราะห์</span>
                                 </td>
                             </tr>
                             <tr data-category="reports">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-chart-bar text-muted"></i>
+                                    <i class="fas fa-chart-pie"></i>
                                     <span data-i18n data-th="รายงานพื้นฐาน" data-en="Basic reports">รายงานพื้นฐาน</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-success"><i
@@ -455,9 +527,8 @@
                             </tr>
                             <tr data-category="reports">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-bolt text-muted"></i>
-                                    <span data-i18n data-th="รายงานเรียลไทม์"
-                                        data-en="Real-time reports">รายงานเรียลไทม์</span>
+                                    <i class="fas fa-bolt"></i>
+                                    <span data-i18n data-th="รายงานเรียลไทม์" data-en="Real-time reports">รายงานเรียลไทม์</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-danger"><i
                                             class="fas fa-xmark"></i></span></td>
@@ -468,9 +539,8 @@
                             </tr>
                             <tr data-category="reports">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-chart-pie text-muted"></i>
-                                    <span data-i18n data-th="การวิเคราะห์ขั้นสูง"
-                                        data-en="Advanced analytics">การวิเคราะห์ขั้นสูง</span>
+                                    <i class="fas fa-file-export"></i>
+                                    <span data-i18n data-th="ส่งออก CSV/Excel" data-en="Export CSV/Excel">ส่งออก CSV/Excel</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-danger"><i
                                             class="fas fa-xmark"></i></span></td>
@@ -481,9 +551,8 @@
                             </tr>
                             <tr data-category="reports">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-file-export text-muted"></i>
-                                    <span data-i18n data-th="ส่งออกข้อมูล (CSV/Excel)"
-                                        data-en="Data export (CSV/Excel)">ส่งออกข้อมูล (CSV/Excel)</span>
+                                    <i class="fas fa-brain"></i>
+                                    <span data-i18n data-th="AI insights" data-en="AI insights">AI insights</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-danger"><i
                                             class="fas fa-xmark"></i></span></td>
@@ -496,15 +565,14 @@
                             <!-- Customization -->
                             <tr class="category-row" data-category="custom">
                                 <td colspan="4" class="category-cell">
-                                    <span class="category-badge"><i class="fas fa-palette"></i></span>
+                                    <i class="fas fa-palette category-badge"></i>
                                     <span data-i18n data-th="การปรับแต่ง" data-en="Customization">การปรับแต่ง</span>
                                 </td>
                             </tr>
                             <tr data-category="custom">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-brush text-muted"></i>
-                                    <span data-i18n data-th="ปรับแต่งแบรนด์"
-                                        data-en="Custom branding">ปรับแต่งแบรนด์</span>
+                                    <i class="fas fa-paint-roller"></i>
+                                    <span data-i18n data-th="ปรับแต่งธีมและโลโก้" data-en="Custom theme & logo">ปรับแต่งธีมและโลโก้</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-danger"><i
                                             class="fas fa-xmark"></i></span></td>
@@ -515,77 +583,58 @@
                             </tr>
                             <tr data-category="custom">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-language text-muted"></i>
-                                    <span data-i18n data-th="รองรับหลายภาษา"
-                                        data-en="Multi-language support">รองรับหลายภาษา</span>
+                                    <i class="fas fa-language"></i>
+                                    <span data-i18n data-th="จำนวนภาษา" data-en="Languages">จำนวนภาษา</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-neutral"><span data-i18n
                                             data-th="2 ภาษา" data-en="2 languages">2 ภาษา</span></span></td>
                                 <td class="text-center plan-col-pro"><span class="value-pill value-primary"><span
                                             data-i18n data-th="5 ภาษา" data-en="5 languages">5 ภาษา</span></span></td>
-                                <td class="text-center"><span class="value-pill value-success"><i
-                                            class="fas fa-infinity"></i> <span data-i18n data-th="ไม่จำกัด"
-                                            data-en="Unlimited">ไม่จำกัด</span></span></td>
+                                <td class="text-center"><span class="value-pill value-primary"><span data-i18n
+                                            data-th="ไม่จำกัด" data-en="Unlimited">ไม่จำกัด</span></span></td>
                             </tr>
-                            <tr data-category="custom">
-                                <td class="ps-4 feature-cell">
-                                    <i class="fas fa-bell text-muted"></i>
-                                    <span data-i18n data-th="การแจ้งเตือน SMS/Email"
-                                        data-en="SMS/Email notifications">การแจ้งเตือน SMS/Email</span>
+
+                            <!-- API -->
+                            <tr class="category-row" data-category="api">
+                                <td colspan="4" class="category-cell">
+                                    <i class="fas fa-plug category-badge"></i>
+                                    <span data-i18n data-th="API และการเชื่อมต่อ" data-en="API & Integrations">API และการเชื่อมต่อ</span>
                                 </td>
-                                <td class="text-center"><span class="value-pill value-warning"><i
-                                            class="fas fa-envelope me-1"></i><span data-i18n data-th="เฉพาะ Email"
-                                            data-en="Email only">เฉพาะ Email</span></span></td>
+                            </tr>
+                            <tr data-category="api">
+                                <td class="ps-4 feature-cell">
+                                    <i class="fas fa-code"></i>
+                                    <span data-i18n data-th="REST API" data-en="REST API">REST API</span>
+                                </td>
+                                <td class="text-center"><span class="value-pill value-danger"><i
+                                            class="fas fa-xmark"></i></span></td>
                                 <td class="text-center plan-col-pro"><span class="value-pill value-success"><i
                                             class="fas fa-check"></i></span></td>
                                 <td class="text-center"><span class="value-pill value-success"><i
                                             class="fas fa-check"></i></span></td>
                             </tr>
-
-                            <!-- Integration & API -->
-                            <tr class="category-row" data-category="api">
-                                <td colspan="4" class="category-cell">
-                                    <span class="category-badge"><i class="fas fa-plug"></i></span>
-                                    <span data-i18n data-th="การเชื่อมต่อและ API"
-                                        data-en="Integration & API">การเชื่อมต่อและ API</span>
-                                </td>
-                            </tr>
                             <tr data-category="api">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-code text-muted"></i>
-                                    <span data-i18n data-th="REST API" data-en="REST API">REST API</span>
+                                    <i class="fas fa-bell"></i>
+                                    <span data-i18n data-th="Webhooks" data-en="Webhooks">Webhooks</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-danger"><i
                                             class="fas fa-xmark"></i></span></td>
-                                <td class="text-center plan-col-pro"><span class="value-pill value-warning"><span
-                                            data-i18n data-th="จำกัด" data-en="Limited">จำกัด</span></span></td>
+                                <td class="text-center plan-col-pro"><span class="value-pill value-success"><i
+                                            class="fas fa-check"></i></span></td>
                                 <td class="text-center"><span class="value-pill value-success"><i
                                             class="fas fa-check"></i></span></td>
                             </tr>
                             <tr data-category="api">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-webhook text-muted"></i>
-                                    <span data-i18n data-th="Webhook" data-en="Webhooks">Webhook</span>
+                                    <i class="fas fa-puzzle-piece"></i>
+                                    <span data-i18n data-th="Third-party integrations"
+                                        data-en="Third-party integrations">Third-party integrations</span>
                                 </td>
-                                <td class="text-center"><span class="value-pill value-danger"><i
-                                            class="fas fa-xmark"></i></span></td>
-                                <td class="text-center plan-col-pro"><span class="value-pill value-danger"><i
-                                            class="fas fa-xmark"></i></span></td>
-                                <td class="text-center"><span class="value-pill value-success"><i
-                                            class="fas fa-check"></i></span></td>
-                            </tr>
-                            <tr data-category="api">
-                                <td class="ps-4 feature-cell">
-                                    <i class="fas fa-puzzle-piece text-muted"></i>
-                                    <span data-i18n data-th="การเชื่อมต่อ third-party"
-                                        data-en="Third-party integrations">การเชื่อมต่อ third-party</span>
+                                <td class="text-center"><span class="value-pill value-neutral">3</span></td>
+                                <td class="text-center plan-col-pro"><span class="value-pill value-primary">15</span>
                                 </td>
-                                <td class="text-center"><span class="value-pill value-danger"><i
-                                            class="fas fa-xmark"></i></span></td>
-                                <td class="text-center plan-col-pro"><span class="value-pill value-primary"><span
-                                            data-i18n data-th="3 รายการ" data-en="3 items">3 รายการ</span></span>
-                                </td>
-                                <td class="text-center"><span class="value-pill value-success"><i
+                                <td class="text-center"><span class="value-pill value-primary"><i
                                             class="fas fa-infinity"></i> <span data-i18n data-th="ไม่จำกัด"
                                             data-en="Unlimited">ไม่จำกัด</span></span></td>
                             </tr>
@@ -593,15 +642,14 @@
                             <!-- Security -->
                             <tr class="category-row" data-category="security">
                                 <td colspan="4" class="category-cell">
-                                    <span class="category-badge"><i class="fas fa-shield-halved"></i></span>
+                                    <i class="fas fa-shield-halved category-badge"></i>
                                     <span data-i18n data-th="ความปลอดภัย" data-en="Security">ความปลอดภัย</span>
                                 </td>
                             </tr>
                             <tr data-category="security">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-lock text-muted"></i>
-                                    <span data-i18n data-th="SSL Encryption" data-en="SSL Encryption">SSL
-                                        Encryption</span>
+                                    <i class="fas fa-lock"></i>
+                                    <span data-i18n data-th="SSL Encryption" data-en="SSL Encryption">SSL Encryption</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-success"><i
                                             class="fas fa-check"></i></span></td>
@@ -612,23 +660,20 @@
                             </tr>
                             <tr data-category="security">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-cloud-arrow-up text-muted"></i>
-                                    <span data-i18n data-th="สำรองข้อมูลอัตโนมัติ"
-                                        data-en="Automatic backup">สำรองข้อมูลอัตโนมัติ</span>
+                                    <i class="fas fa-key"></i>
+                                    <span data-i18n data-th="Two-factor auth" data-en="Two-factor auth">Two-factor auth</span>
                                 </td>
-                                <td class="text-center"><span class="value-pill value-neutral"><span data-i18n
-                                            data-th="รายสัปดาห์" data-en="Weekly">รายสัปดาห์</span></span></td>
-                                <td class="text-center plan-col-pro"><span class="value-pill value-primary"><span
-                                            data-i18n data-th="รายวัน" data-en="Daily">รายวัน</span></span></td>
+                                <td class="text-center"><span class="value-pill value-danger"><i
+                                            class="fas fa-xmark"></i></span></td>
+                                <td class="text-center plan-col-pro"><span class="value-pill value-success"><i
+                                            class="fas fa-check"></i></span></td>
                                 <td class="text-center"><span class="value-pill value-success"><i
-                                            class="fas fa-bolt"></i> <span data-i18n data-th="เรียลไทม์"
-                                            data-en="Real-time">เรียลไทม์</span></span></td>
+                                            class="fas fa-check"></i></span></td>
                             </tr>
                             <tr data-category="security">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-user-shield text-muted"></i>
-                                    <span data-i18n data-th="2FA Authentication" data-en="2FA Authentication">2FA
-                                        Authentication</span>
+                                    <i class="fas fa-clock-rotate-left"></i>
+                                    <span data-i18n data-th="Audit logs" data-en="Audit logs">Audit logs</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-danger"><i
                                             class="fas fa-xmark"></i></span></td>
@@ -641,15 +686,14 @@
                             <!-- Support -->
                             <tr class="category-row" data-category="support">
                                 <td colspan="4" class="category-cell">
-                                    <span class="category-badge"><i class="fas fa-headset"></i></span>
+                                    <i class="fas fa-headset category-badge"></i>
                                     <span data-i18n data-th="การสนับสนุน" data-en="Support">การสนับสนุน</span>
                                 </td>
                             </tr>
                             <tr data-category="support">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-envelope text-muted"></i>
-                                    <span data-i18n data-th="อีเมลซัพพอร์ต"
-                                        data-en="Email support">อีเมลซัพพอร์ต</span>
+                                    <i class="fas fa-envelope"></i>
+                                    <span data-i18n data-th="Email support" data-en="Email support">Email support</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-success"><i
                                             class="fas fa-check"></i></span></td>
@@ -660,21 +704,8 @@
                             </tr>
                             <tr data-category="support">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-comments text-muted"></i>
-                                    <span data-i18n data-th="แชทสด" data-en="Live chat">แชทสด</span>
-                                </td>
-                                <td class="text-center"><span class="value-pill value-danger"><i
-                                            class="fas fa-xmark"></i></span></td>
-                                <td class="text-center plan-col-pro"><span class="value-pill value-success"><i
-                                            class="fas fa-check"></i></span></td>
-                                <td class="text-center"><span class="value-pill value-success"><i
-                                            class="fas fa-check"></i></span></td>
-                            </tr>
-                            <tr data-category="support">
-                                <td class="ps-4 feature-cell">
-                                    <i class="fas fa-phone text-muted"></i>
-                                    <span data-i18n data-th="ซัพพอร์ต 24/7" data-en="24/7 support">ซัพพอร์ต
-                                        24/7</span>
+                                    <i class="fas fa-comments"></i>
+                                    <span data-i18n data-th="Live chat" data-en="Live chat">Live chat</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-danger"><i
                                             class="fas fa-xmark"></i></span></td>
@@ -685,9 +716,8 @@
                             </tr>
                             <tr data-category="support">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-user-tie text-muted"></i>
-                                    <span data-i18n data-th="เจ้าหน้าที่ดูแลเฉพาะ"
-                                        data-en="Dedicated account manager">เจ้าหน้าที่ดูแลเฉพาะ</span>
+                                    <i class="fas fa-headset"></i>
+                                    <span data-i18n data-th="24/7 phone support" data-en="24/7 phone support">24/7 phone support</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-danger"><i
                                             class="fas fa-xmark"></i></span></td>
@@ -698,40 +728,39 @@
                             </tr>
                             <tr data-category="support">
                                 <td class="ps-4 feature-cell">
-                                    <i class="fas fa-file-contract text-muted"></i>
-                                    <span data-i18n data-th="SLA รับประกัน" data-en="SLA guarantee">SLA
-                                        รับประกัน</span>
+                                    <i class="fas fa-user-gear"></i>
+                                    <span data-i18n data-th="Dedicated account manager"
+                                        data-en="Dedicated account manager">Dedicated account manager</span>
                                 </td>
                                 <td class="text-center"><span class="value-pill value-danger"><i
                                             class="fas fa-xmark"></i></span></td>
-                                <td class="text-center plan-col-pro"><span class="value-pill value-primary"><span
-                                            data-i18n data-th="99.5%" data-en="99.5%">99.5%</span></span></td>
-                                <td class="text-center"><span class="value-pill value-success"><span data-i18n
-                                            data-th="99.99%" data-en="99.99%">99.99%</span></span></td>
+                                <td class="text-center plan-col-pro"><span class="value-pill value-danger"><i
+                                            class="fas fa-xmark"></i></span></td>
+                                <td class="text-center"><span class="value-pill value-success"><i
+                                            class="fas fa-check"></i></span></td>
                             </tr>
 
                             <!-- Action Row -->
                             <tr class="action-row">
-                                <td class="ps-4 feature-cell fw-bold">
-                                    <i class="fas fa-hand-pointer text-primary"></i>
-                                    <span data-i18n data-th="เลือกแผน" data-en="Choose Plan">เลือกแผน</span>
+                                <td class="ps-4 feature-cell fw-semibold">
+                                    <span data-i18n data-th="เลือกแผนของคุณ" data-en="Choose your plan">เลือกแผนของคุณ</span>
                                 </td>
-                                <td class="text-center py-4">
+                                <td class="text-center">
                                     <a href="#contact" class="btn-compare btn-compare-outline-success">
                                         <i class="fas fa-cart-plus"></i>
-                                        <span data-i18n data-th="เลือก" data-en="Select">เลือก</span>
+                                        <span data-i18n data-th="เลือกเบสิก" data-en="Choose Basic">เลือกเบสิก</span>
                                     </a>
                                 </td>
-                                <td class="text-center py-4 plan-col-pro">
+                                <td class="text-center plan-col-pro">
                                     <a href="#contact" class="btn-compare btn-compare-primary">
                                         <i class="fas fa-rocket"></i>
-                                        <span data-i18n data-th="เริ่มต้นเลย" data-en="Get Started">เริ่มต้นเลย</span>
+                                        <span data-i18n data-th="เลือกโปร" data-en="Choose Pro">เลือกโปร</span>
                                     </a>
                                 </td>
-                                <td class="text-center py-4">
+                                <td class="text-center">
                                     <a href="#contact" class="btn-compare btn-compare-dark">
                                         <i class="fas fa-envelope"></i>
-                                        <span data-i18n data-th="ติดต่อ" data-en="Contact">ติดต่อ</span>
+                                        <span data-i18n data-th="ติดต่อเรา" data-en="Contact us">ติดต่อเรา</span>
                                     </a>
                                 </td>
                             </tr>
@@ -742,9 +771,234 @@
         </div>
     </section>
 
+    <!-- ================= PARTNERS / GROWTH ================= -->
+    <section id="partners" class="aurora-partners">
+        <div class="container py-5">
+            <div class="text-center mb-5 pricing-header">
+                <span class="hero-eyebrow eyebrow-dark mx-auto">
+                    <span class="eyebrow-dot"></span>
+                    <span data-i18n data-th="พันธมิตรของเรา" data-en="Our Partners">พันธมิตรของเรา</span>
+                </span>
+                <h2 class="section-title">
+                    <span data-i18n data-th="จำนวนพันธมิตรที่เติบโตอย่างต่อเนื่อง"
+                        data-en="A growing number of partners">จำนวนพันธมิตรที่เติบโตอย่างต่อเนื่อง</span>
+                </h2>
+                <p class="section-sub">
+                    <span data-i18n
+                        data-th="ติดตามการเติบโตของเครือข่ายพันธมิตรและผู้เข้าร่วมของเราแบบเรียลไทม์"
+                        data-en="Track the growth of our partner and participant network in real time">ติดตามการเติบโตของเครือข่ายพันธมิตรและผู้เข้าร่วมของเราแบบเรียลไทม์</span>
+                </p>
+            </div>
 
+            <!-- KPI Tiles -->
+            <div class="row g-3 mb-4 partner-kpis">
+                <div class="col-md-3 col-6">
+                    <div class="partner-kpi-card kpi-1">
+                        <div class="kpi-icon"><i class="fas fa-handshake"></i></div>
+                        <div class="kpi-label" data-i18n data-th="พันธมิตรทั้งหมด"
+                            data-en="Total partners">พันธมิตรทั้งหมด</div>
+                        <div class="kpi-value" data-target="2480" data-suffix="+">0</div>
+                        <div class="kpi-trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span data-i18n data-th="+12.4% เดือนนี้" data-en="+12.4% this month">+12.4% เดือนนี้</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="partner-kpi-card kpi-2">
+                        <div class="kpi-icon"><i class="fas fa-user-plus"></i></div>
+                        <div class="kpi-label" data-i18n data-th="ผู้เข้าร่วมใหม่เดือนนี้"
+                            data-en="New participants this month">ผู้เข้าร่วมใหม่เดือนนี้</div>
+                        <div class="kpi-value" data-target="318" data-suffix="">0</div>
+                        <div class="kpi-trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span data-i18n data-th="+8.7% จากเดือนก่อน"
+                                data-en="+8.7% vs last month">+8.7% จากเดือนก่อน</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="partner-kpi-card kpi-3">
+                        <div class="kpi-icon"><i class="fas fa-heart"></i></div>
+                        <div class="kpi-label" data-i18n data-th="อัตราการรักษาพันธมิตร"
+                            data-en="Partner retention">อัตราการรักษาพันธมิตร</div>
+                        <div class="kpi-value" data-target="96" data-suffix="%">0</div>
+                        <div class="kpi-trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span data-i18n data-th="+1.2% จากไตรมาสก่อน"
+                                data-en="+1.2% vs last quarter">+1.2% จากไตรมาสก่อน</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="partner-kpi-card kpi-4">
+                        <div class="kpi-icon"><i class="fas fa-globe"></i></div>
+                        <div class="kpi-label" data-i18n data-th="ครอบคลุมประเทศ"
+                            data-en="Countries covered">ครอบคลุมประเทศ</div>
+                        <div class="kpi-value" data-target="42" data-suffix="">0</div>
+                        <div class="kpi-trend up">
+                            <i class="fas fa-arrow-up"></i>
+                            <span data-i18n data-th="+3 ประเทศในปีนี้" data-en="+3 countries this year">+3 ประเทศในปีนี้</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- bootstrap scripts -->
+            <!-- Line Graph Card -->
+            <div class="partner-graph-card glass-partner">
+                <div class="graph-header">
+                    <div>
+                        <h3 class="section-title-sm mb-1">
+                            <i class="fas fa-chart-line me-2"></i>
+                            <span data-i18n data-th="แนวโน้มจำนวนผู้เข้าร่วม"
+                                data-en="Participant growth trend">แนวโน้มจำนวนผู้เข้าร่วม</span>
+                        </h3>
+                        <p class="graph-sub mb-0" data-i18n
+                            data-th="จำนวนพันธมิตรและผู้เข้าร่วมที่สมัครเข้ามาในแต่ละช่วงเวลา"
+                            data-en="Number of partners and participants joining over time">จำนวนพันธมิตรและผู้เข้าร่วมที่สมัครเข้ามาในแต่ละช่วงเวลา</p>
+                    </div>
+                    <div class="graph-legend">
+                        <span class="legend-item legend-partners">
+                            <span class="legend-dot"></span>
+                            <span data-i18n data-th="พันธมิตร" data-en="Partners">พันธมิตร</span>
+                        </span>
+                        <span class="legend-item legend-participants">
+                            <span class="legend-dot"></span>
+                            <span data-i18n data-th="ผู้เข้าร่วม" data-en="Participants">ผู้เข้าร่วม</span>
+                        </span>
+                    </div>
+                </div>
+
+                <ul class="nav nav-pills graph-filter mb-3" id="partnerGraphFilter" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-range="6m" type="button" role="tab">
+                            <span data-i18n data-th="6 เดือน" data-en="6 Months">6 เดือน</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-range="1y" type="button" role="tab">
+                            <span data-i18n data-th="1 ปี" data-en="1 Year">1 ปี</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-range="all" type="button" role="tab">
+                            <span data-i18n data-th="ทั้งหมด" data-en="All">ทั้งหมด</span>
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="line-graph-wrap">
+                    <svg class="line-graph" viewBox="0 0 800 320" preserveAspectRatio="none"
+                        aria-label="Partner and participant growth line graph" role="img">
+                        <defs>
+                            <linearGradient id="partnersFill" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.45" />
+                                <stop offset="100%" stop-color="#7c3aed" stop-opacity="0" />
+                            </linearGradient>
+                            <linearGradient id="participantsFill" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.4" />
+                                <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+                            </linearGradient>
+                            <linearGradient id="partnersStroke" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#a78bfa" />
+                                <stop offset="100%" stop-color="#7c3aed" />
+                            </linearGradient>
+                            <linearGradient id="participantsStroke" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#22d3ee" />
+                                <stop offset="100%" stop-color="#06b6d4" />
+                            </linearGradient>
+                            <filter id="lineGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feMerge>
+                                    <feMergeNode in="blur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Grid -->
+                        <g class="grid-lines">
+                            <line x1="0" y1="60" x2="800" y2="60" />
+                            <line x1="0" y1="120" x2="800" y2="120" />
+                            <line x1="0" y1="180" x2="800" y2="180" />
+                            <line x1="0" y1="240" x2="800" y2="240" />
+                            <line x1="0" y1="300" x2="800" y2="300" />
+                        </g>
+
+                        <!-- Y axis labels (rendered dynamically) -->
+                        <g class="graph-axis-labels" id="graphYLabels"></g>
+
+                        <!-- Areas (filled under lines) -->
+                        <path id="partnersArea" d="" fill="url(#partnersFill)" />
+                        <path id="participantsArea" d="" fill="url(#participantsFill)" />
+
+                        <!-- Lines -->
+                        <path id="partnersLine" d="" fill="none" stroke="url(#partnersStroke)"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                            filter="url(#lineGlow)" />
+                        <path id="participantsLine" d="" fill="none" stroke="url(#participantsStroke)"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                            filter="url(#lineGlow)" />
+
+                        <!-- Data points -->
+                        <g id="partnersDots"></g>
+                        <g id="participantsDots"></g>
+
+                        <!-- Hover targets -->
+                        <g id="hoverLayer"></g>
+                    </svg>
+
+                    <div class="line-tooltip" id="lineTooltip" role="tooltip" aria-hidden="true">
+                        <div class="tt-month"></div>
+                        <div class="tt-row tt-partners">
+                            <span class="tt-dot"></span>
+                            <span class="tt-label" data-i18n data-th="พันธมิตร" data-en="Partners">พันธมิตร</span>
+                            <span class="tt-value">0</span>
+                        </div>
+                        <div class="tt-row tt-participants">
+                            <span class="tt-dot"></span>
+                            <span class="tt-label" data-i18n data-th="ผู้เข้าร่วม"
+                                data-en="Participants">ผู้เข้าร่วม</span>
+                            <span class="tt-value">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- X axis labels -->
+                <div class="graph-x-labels" id="graphXLabels"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="aurora-footer">
+        <div class="container py-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="brand-mark"><i class="fas fa-users-line"></i></span>
+                    <span class="fw-semibold" data-i18n data-th="คิวอัจฉริยะ" data-en="Smart Queue">คิวอัจฉริยะ</span>
+                </div>
+                <div class="d-flex gap-3 small opacity-75">
+                    <a href="#" class="footer-link" data-i18n data-th="ความเป็นส่วนตัว"
+                        data-en="Privacy">ความเป็นส่วนตัว</a>
+                    <a href="#" class="footer-link" data-i18n data-th="เงื่อนไขการใช้งาน"
+                        data-en="Terms">เงื่อนไขการใช้งาน</a>
+                    <a href="#" class="footer-link" data-i18n data-th="ติดต่อเรา" data-en="Contact">ติดต่อเรา</a>
+                </div>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <p class="text-center small opacity-50 mb-0">© 2026 Smart Queue. <span data-i18n data-th="สงวนลิขสิทธิ์"
+                    data-en="All rights reserved.">สงวนลิขสิทธิ์</span></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
