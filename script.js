@@ -9,6 +9,11 @@
  *   Example:
  *     <span data-i18n data-th="สวัสดี" data-en="Hello">สวัสดี</span>
  *
+ *   For placeholders, add data-i18n-placeholder and the matching
+ *   data-th-placeholder / data-en-placeholder attributes:
+ *
+ *     <input data-i18n-placeholder data-th-placeholder="ชื่อ" data-en-placeholder="Name">
+ *
  * The currently selected language is persisted in localStorage under
  * the key "preferred-language".
  */
@@ -49,6 +54,7 @@
 
     /**
      * Apply translations to all elements with the data-i18n attribute.
+     * Also handles placeholders for inputs via data-i18n-placeholder.
      */
     function applyLang(lang) {
         if (SUPPORTED_LANGS.indexOf(lang) === -1) {
@@ -64,6 +70,15 @@
             const text = el.getAttribute('data-' + lang);
             if (text !== null && text !== undefined) {
                 el.textContent = text;
+            }
+        });
+
+        // Update placeholders for inputs with data-i18n-placeholder
+        const placeholderEls = document.querySelectorAll('[data-i18n-placeholder]');
+        placeholderEls.forEach(function (el) {
+            const text = el.getAttribute('data-' + lang + '-placeholder');
+            if (text !== null && text !== undefined) {
+                el.setAttribute('placeholder', text);
             }
         });
 
@@ -628,6 +643,269 @@
             document.dispatchEvent(new Event('languagechange'));
         });
         obs.observe(langLabel, { childList: true, characterData: true, subtree: true });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+
+/**
+ * Register Form
+ *
+ * - Real-time client-side validation with localized error messages.
+ * - Password strength meter (4 levels).
+ * - Show/hide password toggles.
+ * - Mock submit that simulates an API request, then swaps the form
+ *   for a localized success summary.
+ * - Re-validates and re-localizes when the language changes.
+ */
+(function () {
+    'use strict';
+
+    function getLang() {
+        try {
+            const stored = localStorage.getItem('preferred-language');
+            if (stored === 'en' || stored === 'th') return stored;
+        } catch (e) { /* ignore */ }
+        return 'th';
+    }
+
+    /**
+     * Score a password from 0 (empty) to 4 (very strong).
+     * Rewards length and a mix of character classes.
+     */
+    function scorePassword(pwd) {
+        if (!pwd) return 0;
+        let score = 0;
+        if (pwd.length >= 8) score += 1;
+        if (pwd.length >= 12) score += 1;
+        if (/[A-Z]/.test(pwd) && /[a-z]/.test(pwd)) score += 1;
+        if (/[0-9]/.test(pwd)) score += 1;
+        if (/[^A-Za-z0-9]/.test(pwd)) score += 1;
+        // Cap at 4
+        if (score > 4) score = 4;
+        // Length bonus overrides 4-class mix for short passwords
+        if (pwd.length < 8) return 1;
+        return score;
+    }
+
+    function strengthLabel(level, lang) {
+        const labels = {
+            0: { th: 'ยังไม่กรอก', en: 'Not set' },
+            1: { th: 'อ่อน', en: 'Weak' },
+            2: { th: 'พอใช้', en: 'Fair' },
+            3: { th: 'ดี', en: 'Good' },
+            4: { th: 'ยอดเยี่ยม', en: 'Strong' }
+        };
+        return (labels[level] && labels[level][lang]) || '';
+    }
+
+    function localizedText(el, lang) {
+        return el.getAttribute('data-' + lang) || el.textContent || '';
+    }
+
+    function init() {
+        const section = document.querySelector('.aurora-register');
+        const form = document.getElementById('registerForm');
+        if (!section || !form) return;
+
+        const password = document.getElementById('regPassword');
+        const confirm = document.getElementById('regConfirmPassword');
+        const strength = document.getElementById('passwordStrength');
+        const strengthLabelEl = strength ? strength.querySelector('.password-strength-label') : null;
+        const submitBtn = document.getElementById('registerSubmit');
+
+        // ---- Phone validation: use a custom JS regex (Chrome /v flag rejects '-' in pattern attr) ----
+        const phoneInput = document.getElementById('regPhone');
+        // Phone regex: 8-20 chars, digits / spaces / dashes / parentheses
+        var phoneRe = /^[0-9 ()\-]{8,20}$/;
+        if (phoneInput && phoneInput.hasAttribute('data-validate-phone')) {
+            phoneInput.addEventListener('input', function () {
+                if (phoneInput.value === '') {
+                    phoneInput.setCustomValidity('');
+                    return;
+                }
+                if (!phoneRe.test(phoneInput.value)) {
+                    phoneInput.setCustomValidity('phone');
+                } else {
+                    phoneInput.setCustomValidity('');
+                }
+            });
+        }
+
+        // ---- Password strength ----
+        function updateStrength() {
+            if (!strength || !strengthLabelEl || !password) return;
+            const lvl = scorePassword(password.value);
+            strength.setAttribute('data-strength', String(lvl));
+            const lang = getLang();
+            strengthLabelEl.textContent = strengthLabel(lvl, lang);
+        }
+        if (password) {
+            password.addEventListener('input', updateStrength);
+        }
+
+        // ---- Show / hide password toggles ----
+        section.querySelectorAll('.aurora-input-toggle').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const targetId = btn.getAttribute('data-toggle');
+                const input = targetId ? document.getElementById(targetId) : null;
+                if (!input) return;
+                const isPassword = input.type === 'password';
+                input.type = isPassword ? 'text' : 'password';
+                const icon = btn.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-eye', !isPassword);
+                    icon.classList.toggle('fa-eye-slash', isPassword);
+                }
+                btn.setAttribute('aria-pressed', String(isPassword));
+            });
+        });
+
+        // ---- Confirm password live check ----
+        function checkConfirm() {
+            if (!confirm || !password) return;
+            if (confirm.value && confirm.value !== password.value) {
+                confirm.setCustomValidity('mismatch');
+            } else {
+                confirm.setCustomValidity('');
+            }
+        }
+        if (confirm && password) {
+            confirm.addEventListener('input', checkConfirm);
+            password.addEventListener('input', checkConfirm);
+        }
+
+        // ---- Plan labels (for success summary) ----
+        const planLabels = {
+            basic: { th: 'เบสิก — ฿499/เดือน', en: 'Basic — ฿499/mo' },
+            pro: { th: 'โปร — ฿1,499/เดือน', en: 'Pro — ฿1,499/mo' },
+            enterprise: { th: 'องค์กร — ติดต่อเรา', en: 'Enterprise — Contact us' }
+        };
+
+        // ---- Localize invalid-feedback messages on language change ----
+        function localizeFeedbacks() {
+            const lang = getLang();
+            section.querySelectorAll('.invalid-feedback[data-i18n]').forEach(function (el) {
+                el.textContent = localizedText(el, lang);
+            });
+        }
+        localizeFeedbacks();
+
+        // ---- Re-localize on language change ----
+        document.addEventListener('languagechange', function () {
+            localizeFeedbacks();
+            updateStrength();
+        });
+
+        // ---- Submit handler ----
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Final confirm check
+            checkConfirm();
+
+            // Force browser validation UI
+            form.classList.add('was-validated');
+
+            if (!form.checkValidity()) {
+                // Focus the first invalid field for accessibility
+                const firstInvalid = form.querySelector(':invalid');
+                if (firstInvalid) firstInvalid.focus();
+                return;
+            }
+
+            // Build a summary of the entered data
+            const data = {
+                fullName: form.fullName.value.trim(),
+                email: form.email.value.trim(),
+                phone: form.phone.value.trim() || '—',
+                company: form.company.value.trim(),
+                plan: form.plan.value
+            };
+
+            // Show loading state on the button
+            if (submitBtn) {
+                submitBtn.classList.add('is-loading');
+                const icon = submitBtn.querySelector('.submit-icon');
+                if (icon) icon.style.visibility = 'hidden';
+            }
+
+            // Simulate a network request
+            window.setTimeout(function () {
+                showSuccess(data);
+            }, 1100);
+        });
+
+        function showSuccess(data) {
+            const lang = getLang();
+            const labels = {
+                title: lang === 'en' ? 'Welcome aboard!' : 'ยินดีต้อนรับ!',
+                subtitle: lang === 'en'
+                    ? 'Your account has been created. We sent a verification link to your email.'
+                    : 'สร้างบัญชีเรียบร้อยแล้ว เราได้ส่งลิงก์ยืนยันไปยังอีเมลของคุณแล้ว',
+                labels: {
+                    name: lang === 'en' ? 'Full name' : 'ชื่อ-นามสกุล',
+                    email: lang === 'en' ? 'Email' : 'อีเมล',
+                    phone: lang === 'en' ? 'Phone' : 'เบอร์โทรศัพท์',
+                    company: lang === 'en' ? 'Company' : 'ชื่อธุรกิจ/บริษัท',
+                    plan: lang === 'en' ? 'Plan' : 'แผน'
+                },
+                planName: (planLabels[data.plan] && planLabels[data.plan][lang]) || data.plan,
+                continue: lang === 'en' ? 'Continue to dashboard' : 'ไปยังแดชบอร์ด',
+                another: lang === 'en' ? 'Create another account' : 'สมัครอีกบัญชี'
+            };
+
+            const cardBody = form.closest('.card-body');
+            if (!cardBody) return;
+
+            cardBody.innerHTML =
+                '<div class="register-success">' +
+                '  <div class="success-icon"><i class="fas fa-check"></i></div>' +
+                '  <h3>' + labels.title + '</h3>' +
+                '  <p>' + labels.subtitle + '</p>' +
+                '  <div class="success-summary">' +
+                '    <div class="row-line"><span>' + labels.labels.name + '</span><strong>' + escapeHtml(data.fullName) + '</strong></div>' +
+                '    <div class="row-line"><span>' + labels.labels.email + '</span><strong>' + escapeHtml(data.email) + '</strong></div>' +
+                '    <div class="row-line"><span>' + labels.labels.phone + '</span><strong>' + escapeHtml(data.phone) + '</strong></div>' +
+                '    <div class="row-line"><span>' + labels.labels.company + '</span><strong>' + escapeHtml(data.company) + '</strong></div>' +
+                '    <div class="row-line"><span>' + labels.labels.plan + '</span><strong>' + escapeHtml(labels.planName) + '</strong></div>' +
+                '  </div>' +
+                '  <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center">' +
+                '    <button type="button" class="btn aurora-btn aurora-btn-primary aurora-btn-glow" id="successContinue">' +
+                '      <i class="fas fa-arrow-right me-2"></i>' + labels.continue +
+                '    </button>' +
+                '    <button type="button" class="btn aurora-btn aurora-btn-ghost" id="successAnother">' +
+                '      <i class="fas fa-user-plus me-2"></i>' + labels.another +
+                '    </button>' +
+                '  </div>' +
+                '</div>';
+
+            const cont = document.getElementById('successContinue');
+            if (cont) cont.addEventListener('click', function () {
+                // In a real app, route to dashboard
+                window.location.hash = '#pricing';
+            });
+
+            const another = document.getElementById('successAnother');
+            if (another) another.addEventListener('click', function () {
+                // Re-render the form so the user can sign up again
+                window.location.reload();
+            });
+        }
+
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
     }
 
     if (document.readyState === 'loading') {
