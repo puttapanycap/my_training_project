@@ -21,6 +21,19 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./styles.css">
+
+    <script>
+        // Apply theme as early as possible to avoid flash of unstyled content.
+        (function () {
+            try {
+                var stored = localStorage.getItem('preferred-theme');
+                var theme = (stored === 'light' || stored === 'dark') ? stored : 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 
 <body class="aurora-body">
@@ -77,6 +90,14 @@
                             <i class="fas fa-rocket me-1"></i>
                             <span data-i18n data-th="สมัครใช้งาน" data-en="Get Started">สมัครใช้งาน</span>
                         </a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button type="button" id="themeToggle" class="theme-toggle"
+                            aria-label="Toggle color theme" aria-pressed="false"
+                            title="Toggle theme">
+                            <i class="fas fa-sun theme-icon-sun" aria-hidden="true"></i>
+                            <i class="fas fa-moon theme-icon-moon" aria-hidden="true"></i>
+                        </button>
                     </li>
                     <li class="nav-item dropdown lang-switcher">
                         <a class="nav-link aurora-nav-link aurora-lang-toggle" href="#" id="langDropdown" role="button"

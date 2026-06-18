@@ -914,3 +914,105 @@
         init();
     }
 })();
+
+/**
+ * Theme Switcher (Dark / Light)
+ *
+ * Toggles the `data-theme` attribute on the <html> element between
+ * "dark" (default) and "light". The choice is persisted in
+ * localStorage under the key "preferred-theme". The very first
+ * application of the theme happens in an inline script in <head>
+ * to avoid a flash of the wrong theme on page load.
+ *
+ * Usage:
+ *   <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme">
+ *     <i class="fas fa-sun theme-icon-sun"></i>
+ *     <i class="fas fa-moon theme-icon-moon"></i>
+ *   </button>
+ */
+(function () {
+    'use strict';
+
+    const STORAGE_KEY = 'preferred-theme';
+    const DEFAULT_THEME = 'dark';
+    const VALID_THEMES = ['dark', 'light'];
+
+    function getCurrentTheme() {
+        try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored && VALID_THEMES.indexOf(stored) !== -1) {
+                return stored;
+            }
+        } catch (e) {
+            // localStorage may be unavailable (e.g. private mode)
+        }
+        return DEFAULT_THEME;
+    }
+
+    function saveTheme(theme) {
+        try {
+            localStorage.setItem(STORAGE_KEY, theme);
+        } catch (e) {
+            // Ignore storage errors
+        }
+    }
+
+    function applyTheme(theme) {
+        if (VALID_THEMES.indexOf(theme) === -1) {
+            theme = DEFAULT_THEME;
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        const btn = document.getElementById('themeToggle');
+        if (btn) {
+            // aria-pressed reflects the *current* state: light = true
+            btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+            btn.setAttribute(
+                'title',
+                theme === 'light'
+                    ? (document.documentElement.getAttribute('lang') === 'en'
+                        ? 'Switch to dark theme'
+                        : 'เปลี่ยนเป็นธีมมืด')
+                    : (document.documentElement.getAttribute('lang') === 'en'
+                        ? 'Switch to light theme'
+                        : 'เปลี่ยนเป็นธีมสว่าง')
+            );
+        }
+    }
+
+    function setTheme(theme) {
+        saveTheme(theme);
+        applyTheme(theme);
+    }
+
+    function init() {
+        // The <html data-theme="..."> attribute was set by the
+        // inline boot script in <head>, but we re-apply to make sure
+        // aria-pressed / title are in sync and any code that reads
+        // localStorage gets a consistent value.
+        const current = getCurrentTheme();
+        applyTheme(current);
+
+        const btn = document.getElementById('themeToggle');
+        if (!btn) return;
+
+        btn.addEventListener('click', function () {
+            const next = getCurrentTheme() === 'light' ? 'dark' : 'light';
+            setTheme(next);
+        });
+
+        // Keep the button's tooltip in sync with the active language.
+        const langLabel = document.getElementById('currentLangLabel');
+        if (langLabel) {
+            const obs = new MutationObserver(function () {
+                applyTheme(getCurrentTheme());
+            });
+            obs.observe(langLabel, { childList: true, characterData: true, subtree: true });
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
