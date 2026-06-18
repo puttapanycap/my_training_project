@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container">
+      <a class="navbar-brand link-light" href="#">Navbar</a>
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-light">Login</button>
+        <button class="btn btn-light">Sign Up</button>
+      </div>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <!-- <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div> -->
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <h1 class="text-center display-1 p-4 border text-primary">Hello, world!</h1>
+    <p class="lead text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+    <div class="row g-3">
+      <div class="col-md-3 col-xs-6 col-12 bg-primary text-white">
+        COL-6
+      </div>
+      <div class="col-md-3 col-xs-6 col-12 bg-secondary text-white">
+        COL-6
+      </div>
+      <div class="col-md-3 col-xs-6 col-12 bg-success text-white">
+        COL-6
+      </div>
+      <div class="col-md-3 col-xs-6 col-12 bg-danger text-white">
+        COL-6
+      </div>
+      <div class="col-md-3 col-xs-6 col-12 text-white d-flex justify-content-center align-items-center gap-3">
+        <button class="btn btn-outline-primary btn-lg">Click Me</button>
+        <button class="btn btn-primary btn-lg">Click Me</button>
+      </div>
+    </div>
+
+    <div class="row g-3 mt-4">
+
+      <div>
+        <div class="alert alert-warning" role="alert">
+          This is a primary alert!
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card rounded-4 h-100">
+          <div class="card-body d-flex flex-column gap-3">
+            <div>
+              <span class="badge text-bg-success">Home</span>
+            </div>
+            <h3 class="card-title">Card title</h3>
+            <p class="lead card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <img
+              src="https://images.unsplash.com/photo-1773332585754-f1436987743b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="" />
+            <button class="btn btn-sm btn-outline-primary w-100">Go somewhere</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="d-flex flex-column justify-content-center w-100 gap-2">
+          <button class="btn btn-outline-primary">Click Me</button>
+          <button class="btn btn-danger">Reset</button>
+        </div>
+        <div class="list-group mt-3">
+          <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+            An active item
+          </a>
+          <a href="#" class="list-group-item list-group-item-action active">A second item</a>
+          <a href="#" class="list-group-item list-group-item-action">A third item</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Form -->
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <form class="needs-validation row g-3" novalidate>
+
+          <div class="col-md-1">
+            <label for="pname" class="form-label">Prefix Name</label>
+            <input class="form-control" list="prefixOptions" id="pname" placeholder="Type to search...">
+            <datalist id="prefixOptions">
+              <option value="" disabled selected hidden>Select a prefix</option>
+              <option value="Mr.">
+              <option value="Mrs.">
+              <option value="Ms.">
+              <option value="Dr.">
+              <option value="Prof.">
+            </datalist>
+          </div>
+
+          <div class="col-md-5">
+            <label for="fname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="fname" required>
+            <div class="invalid-feedback">
+              Please provide your first name.
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label for="lname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lname" required>
+            <div class="invalid-feedback">
+              Please provide your last name.
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <label for="age" class="form-label">Age: <span id="ageValue">50</span></label>
+            <input type="range" class="form-range" id="age" min="0" max="100" value="50" required>
+            <div class="invalid-feedback">
+              Please provide your age.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+            <div class="invalid-feedback">
+              Please provide a valid address.
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Address 2</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity" required>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip" required>
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+
+          <div>
+            <input type="checkbox" class="form-check-input" id="terms" required>
+            <div class="invalid-feedback">
+              You must accept the terms and conditions.
+            </div>
+            <label class="form-check-label" for="terms">
+              ยอมรับเงื่อนไขและข้อตกลง
+            </label>
+          </div>
+          
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-primary mt-4">Sign in</button>
+            <button type="reset" class="btn btn-danger mt-4">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script>
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+
+    // Show range slider value in real-time
+    const ageRange = document.getElementById('age')
+    const ageValue = document.getElementById('ageValue')
+    ageRange.addEventListener('input', () => {
+      ageValue.textContent = ageRange.value
+    })
+  </script>
+</body>
+
+</html>

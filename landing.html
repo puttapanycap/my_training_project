@@ -1,0 +1,592 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-users-line"></i>
+                <span data-i18n data-th="คิวอัจฉริยะ" data-en="Smart Queue">คิวอัจฉริยะ</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">
+                            <i class="fas fa-star"></i><span data-i18n data-th="ฟีเจอร์"
+                                data-en="Features">ฟีเจอร์</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">
+                            <i class="fas fa-tags"></i><span data-i18n data-th="ราคา" data-en="Pricing">ราคา</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-right-to-bracket"></i><span data-i18n data-th="เข้าสู่ระบบ"
+                                data-en="Login">เข้าสู่ระบบ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-light btn-sm rounded-pill px-3 fw-semibold shadow-sm" href="#pricing">
+                            <i class="fas fa-rocket me-1"></i><span data-i18n data-th="สมัครใช้งาน"
+                                data-en="Get Started">สมัครใช้งาน</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown lang-switcher">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language switcher">
+                            <i class="fas fa-globe"></i><span id="currentLangLabel">TH</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li>
+                                <a class="dropdown-item lang-switch" href="#" data-lang="th">
+                                    <span class="flag">🇹🇭</span> ไทย
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item lang-switch" href="#" data-lang="en">
+                                    <span class="flag">🇬🇧</span> English
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center text-white text-center"
+        style="min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <div class="row align-items-center justify-content-center g-5">
+                <div class="col-lg-7 text-lg-start text-center">
+                    <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
+                        <i class="fas fa-users-line me-3"></i><span data-i18n data-th="ระบบจัดการคิวอัจฉริยะ"
+                            data-en="Smart Queue System">ระบบจัดการคิวอัจฉริยะ</span>
+                    </h1>
+                    <p class="lead fs-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                        <span data-i18n
+                            data-th="ลาก่อนการรอคอยนานๆ ระบบจัดการคิวอัจฉริยะของเราช่วยเพิ่มประสิทธิภาพ ลดเวลารอ และทำให้ลูกค้าของคุณมีความสุข"
+                            data-en="Say goodbye to long waits. Our intelligent queue management system streamlines your flow, reduces wait times, and keeps your customers happy.">ลาก่อนการรอคอยนานๆ
+                            ระบบจัดการคิวอัจฉริยะของเราช่วยเพิ่มประสิทธิภาพ ลดเวลารอ
+                            และทำให้ลูกค้าของคุณมีความสุข</span>
+                    </p>
+                    <div
+                        class="d-flex justify-content-lg-start justify-content-center gap-3 animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="#features" class="btn btn-light btn-lg px-5 py-3 fw-semibold rounded-pill shadow">
+                            <i class="fas fa-play-circle me-2"></i><span data-i18n data-th="เริ่มต้นใช้งาน"
+                                data-en="Get Started">เริ่มต้นใช้งาน</span>
+                        </a>
+                        <a href="#pricing" class="btn btn-outline-light btn-lg px-5 py-3 fw-semibold rounded-pill">
+                            <i class="fas fa-info-circle me-2"></i><span data-i18n data-th="เรียนรู้เพิ่มเติม"
+                                data-en="Learn More">เรียนรู้เพิ่มเติม</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center animate__animated animate__fadeIn animate__delay-2s">
+                    <img src="./assets/hero.png" alt="Smart Queue System" class="img-fluid hero-image">
+                </div>
+            </div>
+            <div id="features" class="row mt-5 pt-4 animate__animated animate__fadeIn animate__delay-3s">
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-clock fa-2x mb-2"></i>
+                        <h5 class="fw-bold"><span data-i18n data-th="ลดเวลารอคอย"
+                                data-en="Reduce Wait Time">ลดเวลารอคอย</span></h5>
+                        <p class="mb-0 opacity-75"><span data-i18n data-th="คิวสั้นลงสูงสุด 60%"
+                                data-en="Up to 60% shorter queues">คิวสั้นลงสูงสุด 60%</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-chart-line fa-2x mb-2"></i>
+                        <h5 class="fw-bold"><span data-i18n data-th="วิเคราะห์แบบเรียลไทม์"
+                                data-en="Real-Time Analytics">วิเคราะห์แบบเรียลไทม์</span></h5>
+                        <p class="mb-0 opacity-75"><span data-i18n data-th="ตรวจสอบและปรับปรุงได้ทันที"
+                                data-en="Monitor and optimize instantly">ตรวจสอบและปรับปรุงได้ทันที</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="p-3">
+                        <i class="fas fa-mobile-screen fa-2x mb-2"></i>
+                        <h5 class="fw-bold"><span data-i18n data-th="รองรับมือถือ"
+                                data-en="Mobile Ready">รองรับมือถือ</span></h5>
+                        <p class="mb-0 opacity-75"><span data-i18n data-th="จองคิวได้จากทุกที่"
+                                data-en="Join queues from anywhere">จองคิวได้จากทุกที่</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-4 fw-bold mb-3">
+                    <i class="fas fa-tags text-primary me-2"></i><span data-i18n data-th="แผนราคาของเรา"
+                        data-en="Our Pricing Plans">แผนราคาของเรา</span>
+                </h2>
+                <p class="lead text-muted">
+                    <span data-i18n data-th="เลือกแผนที่เหมาะกับธุรกิจของคุณ"
+                        data-en="Choose the plan that fits your business">เลือกแผนที่เหมาะกับธุรกิจของคุณ</span>
+                </p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Basic Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card pricing-card h-100 border-0 shadow-sm animate__animated animate__fadeInUp">
+                        <div class="card-body p-5 text-center">
+                            <div class="pricing-icon mb-3">
+                                <i class="fas fa-seedling fa-3x text-success"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">
+                                <span data-i18n data-th="เบสิก" data-en="Basic">เบสิก</span>
+                            </h4>
+                            <div class="pricing-price mb-4">
+                                <span class="display-4 fw-bold text-primary">฿499</span>
+                                <span class="text-muted">/<span data-i18n data-th="เดือน"
+                                        data-en="month">เดือน</span></span>
+                            </div>
+                            <ul class="list-unstyled mb-4 text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="คิวสูงสุด 100 คิว/วัน" data-en="Up to 100 queues/day">คิวสูงสุด 100
+                                        คิว/วัน</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="รองรับ 1 สาขา" data-en="1 branch support">รองรับ 1 สาขา</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="รายงานพื้นฐาน" data-en="Basic reports">รายงานพื้นฐาน</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="อีเมลซัพพอร์ต" data-en="Email support">อีเมลซัพพอร์ต</span></li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg w-100 rounded-pill">
+                                <i class="fas fa-cart-plus me-2"></i><span data-i18n data-th="เลือกแผนนี้"
+                                    data-en="Choose Plan">เลือกแผนนี้</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pro Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="card pricing-card h-100 border-0 shadow-lg animate__animated animate__fadeInUp animate__delay-1s position-relative">
+                        <span
+                            class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle px-3 py-2 rounded-pill">
+                            <i class="fas fa-star me-1"></i><span data-i18n data-th="แนะนำ"
+                                data-en="Popular">แนะนำ</span>
+                        </span>
+                        <div class="card-body p-5 text-center">
+                            <div class="pricing-icon mb-3">
+                                <i class="fas fa-rocket fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">
+                                <span data-i18n data-th="โปร" data-en="Pro">โปร</span>
+                            </h4>
+                            <div class="pricing-price mb-4">
+                                <span class="display-4 fw-bold text-primary">฿1,499</span>
+                                <span class="text-muted">/<span data-i18n data-th="เดือน"
+                                        data-en="month">เดือน</span></span>
+                            </div>
+                            <ul class="list-unstyled mb-4 text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="คิวไม่จำกัด" data-en="Unlimited queues">คิวไม่จำกัด</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="รองรับ 5 สาขา" data-en="Up to 5 branches">รองรับ 5 สาขา</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="รายงานขั้นสูง & เรียลไทม์"
+                                        data-en="Advanced real-time reports">รายงานขั้นสูง & เรียลไทม์</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="ซัพพอร์ต 24/7" data-en="24/7 support">ซัพพอร์ต 24/7</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="ปรับแต่งแบรนด์ได้" data-en="Custom branding">ปรับแต่งแบรนด์ได้</span>
+                                </li>
+                            </ul>
+                            <a href="#contact" class="btn btn-primary btn-lg w-100 rounded-pill shadow">
+                                <i class="fas fa-cart-plus me-2"></i><span data-i18n data-th="เลือกแผนนี้"
+                                    data-en="Choose Plan">เลือกแผนนี้</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="card pricing-card h-100 border-0 shadow-sm animate__animated animate__fadeInUp animate__delay-2s">
+                        <div class="card-body p-5 text-center">
+                            <div class="pricing-icon mb-3">
+                                <i class="fas fa-building fa-3x text-dark"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">
+                                <span data-i18n data-th="องค์กร" data-en="Enterprise">องค์กร</span>
+                            </h4>
+                            <div class="pricing-price mb-4">
+                                <span class="display-4 fw-bold text-primary"><span data-i18n data-th="ติดต่อเรา"
+                                        data-en="Contact Us">ติดต่อเรา</span></span>
+                            </div>
+                            <ul class="list-unstyled mb-4 text-start">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="ทุกฟีเจอร์ในแผนโปร"
+                                        data-en="All Pro features">ทุกฟีเจอร์ในแผนโปร</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="สาขาไม่จำกัด" data-en="Unlimited branches">สาขาไม่จำกัด</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="API และ Webhook" data-en="API & Webhooks">API และ Webhook</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="เจ้าหน้าที่ดูแลเฉพาะ"
+                                        data-en="Dedicated account manager">เจ้าหน้าที่ดูแลเฉพาะ</span></li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span data-i18n
+                                        data-th="SLA รับประกัน" data-en="SLA guarantee">SLA รับประกัน</span></li>
+                            </ul>
+                            <a href="#contact" class="btn btn-dark btn-lg w-100 rounded-pill">
+                                <i class="fas fa-envelope me-2"></i><span data-i18n data-th="ติดต่อฝ่ายขาย"
+                                    data-en="Contact Sales">ติดต่อฝ่ายขาย</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="comparison-table-wrapper mt-5 pt-4 animate__animated animate__fadeInUp">
+                <h3 class="text-center fw-bold mb-4">
+                    <i class="fas fa-table-list text-primary me-2"></i><span data-i18n data-th="ตารางเปรียบเทียบแพ็กเกจ"
+                        data-en="Package Comparison Table">ตารางเปรียบเทียบแพ็กเกจ</span>
+                </h3>
+                <div class="table-responsive shadow-sm rounded-4 overflow-hidden bg-white">
+                    <table class="table table-hover align-middle mb-0 comparison-table">
+                        <thead>
+                            <tr class="text-white text-center">
+                                <th scope="col" class="text-start ps-4"
+                                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-list-check me-2"></i><span data-i18n data-th="ฟีเจอร์"
+                                        data-en="Feature">ฟีเจอร์</span>
+                                </th>
+                                <th scope="col" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-seedling me-1"></i><span data-i18n data-th="เบสิก"
+                                        data-en="Basic">เบสิก</span><br>
+                                    <small class="fw-normal opacity-75">฿499/<span data-i18n data-th="เดือน"
+                                            data-en="month">เดือน</span></small>
+                                </th>
+                                <th scope="col"
+                                    style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative;">
+                                    <span
+                                        class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle px-2 py-1 rounded-pill"
+                                        style="font-size: 0.7rem;">
+                                        <i class="fas fa-star me-1"></i><span data-i18n data-th="แนะนำ"
+                                            data-en="Popular">แนะนำ</span>
+                                    </span>
+                                    <i class="fas fa-rocket me-1"></i><span data-i18n data-th="โปร"
+                                        data-en="Pro">โปร</span><br>
+                                    <small class="fw-normal opacity-75">฿1,499/<span data-i18n data-th="เดือน"
+                                            data-en="month">เดือน</span></small>
+                                </th>
+                                <th scope="col" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                    <i class="fas fa-building me-1"></i><span data-i18n data-th="องค์กร"
+                                        data-en="Enterprise">องค์กร</span><br>
+                                    <small class="fw-normal opacity-75"><span data-i18n data-th="ติดต่อเรา"
+                                            data-en="Contact Us">ติดต่อเรา</span></small>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Core Features -->
+                            <tr class="category-row">
+                                <td colspan="4" class="fw-bold ps-4 py-2"
+                                    style="background: rgba(102, 126, 234, 0.08); color: #667eea;">
+                                    <i class="fas fa-cube me-2"></i><span data-i18n data-th="ฟีเจอร์หลัก"
+                                        data-en="Core Features">ฟีเจอร์หลัก</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-list-ol text-muted me-2"></i><span data-i18n
+                                        data-th="จำนวนคิวต่อวัน" data-en="Queues per day">จำนวนคิวต่อวัน</span></td>
+                                <td class="text-center"><span data-i18n data-th="100 คิว" data-en="100 queues">100
+                                        คิว</span></td>
+                                <td class="text-center"><i class="fas fa-infinity text-success"></i> <span data-i18n
+                                        data-th="ไม่จำกัด" data-en="Unlimited">ไม่จำกัด</span></td>
+                                <td class="text-center"><i class="fas fa-infinity text-success"></i> <span data-i18n
+                                        data-th="ไม่จำกัด" data-en="Unlimited">ไม่จำกัด</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-store text-muted me-2"></i><span data-i18n
+                                        data-th="จำนวนสาขา" data-en="Number of branches">จำนวนสาขา</span></td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">5</td>
+                                <td class="text-center"><i class="fas fa-infinity text-success"></i> <span data-i18n
+                                        data-th="ไม่จำกัด" data-en="Unlimited">ไม่จำกัด</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-users text-muted me-2"></i><span data-i18n
+                                        data-th="จำนวนพนักงาน" data-en="Staff accounts">จำนวนพนักงาน</span></td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">15</td>
+                                <td class="text-center"><i class="fas fa-infinity text-success"></i> <span data-i18n
+                                        data-th="ไม่จำกัด" data-en="Unlimited">ไม่จำกัด</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-mobile-screen text-muted me-2"></i><span data-i18n
+                                        data-th="แอปมือถือ" data-en="Mobile app">แอปมือถือ</span></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+
+                            <!-- Reporting & Analytics -->
+                            <tr class="category-row">
+                                <td colspan="4" class="fw-bold ps-4 py-2"
+                                    style="background: rgba(102, 126, 234, 0.08); color: #667eea;">
+                                    <i class="fas fa-chart-line me-2"></i><span data-i18n
+                                        data-th="รายงานและการวิเคราะห์"
+                                        data-en="Reports & Analytics">รายงานและการวิเคราะห์</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-chart-bar text-muted me-2"></i><span data-i18n
+                                        data-th="รายงานพื้นฐาน" data-en="Basic reports">รายงานพื้นฐาน</span></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-chart-line text-muted me-2"></i><span data-i18n
+                                        data-th="รายงานเรียลไทม์" data-en="Real-time reports">รายงานเรียลไทม์</span>
+                                </td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-chart-pie text-muted me-2"></i><span data-i18n
+                                        data-th="การวิเคราะห์ขั้นสูง"
+                                        data-en="Advanced analytics">การวิเคราะห์ขั้นสูง</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-file-export text-muted me-2"></i><span data-i18n
+                                        data-th="ส่งออกข้อมูล (CSV/Excel)"
+                                        data-en="Data export (CSV/Excel)">ส่งออกข้อมูล (CSV/Excel)</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+
+                            <!-- Customization -->
+                            <tr class="category-row">
+                                <td colspan="4" class="fw-bold ps-4 py-2"
+                                    style="background: rgba(102, 126, 234, 0.08); color: #667eea;">
+                                    <i class="fas fa-palette me-2"></i><span data-i18n data-th="การปรับแต่ง"
+                                        data-en="Customization">การปรับแต่ง</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-brush text-muted me-2"></i><span data-i18n
+                                        data-th="ปรับแต่งแบรนด์" data-en="Custom branding">ปรับแต่งแบรนด์</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-language text-muted me-2"></i><span data-i18n
+                                        data-th="รองรับหลายภาษา" data-en="Multi-language support">รองรับหลายภาษา</span>
+                                </td>
+                                <td class="text-center"><span data-i18n data-th="2 ภาษา" data-en="2 languages">2
+                                        ภาษา</span></td>
+                                <td class="text-center"><span data-i18n data-th="5 ภาษา" data-en="5 languages">5
+                                        ภาษา</span></td>
+                                <td class="text-center"><i class="fas fa-infinity text-success"></i> <span data-i18n
+                                        data-th="ไม่จำกัด" data-en="Unlimited">ไม่จำกัด</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-bell text-muted me-2"></i><span data-i18n
+                                        data-th="การแจ้งเตือน SMS/Email" data-en="SMS/Email notifications">การแจ้งเตือน
+                                        SMS/Email</span></td>
+                                <td class="text-center"><span data-i18n data-th="เฉพาะ Email" data-en="Email only">เฉพาะ
+                                        Email</span></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+
+                            <!-- Integration & API -->
+                            <tr class="category-row">
+                                <td colspan="4" class="fw-bold ps-4 py-2"
+                                    style="background: rgba(102, 126, 234, 0.08); color: #667eea;">
+                                    <i class="fas fa-plug me-2"></i><span data-i18n data-th="การเชื่อมต่อและ API"
+                                        data-en="Integration & API">การเชื่อมต่อและ API</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-code text-muted me-2"></i><span data-i18n
+                                        data-th="REST API" data-en="REST API">REST API</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><span data-i18n data-th="จำกัด" data-en="Limited">จำกัด</span>
+                                </td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-webhook text-muted me-2"></i><span data-i18n
+                                        data-th="Webhook" data-en="Webhooks">Webhook</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-puzzle-piece text-muted me-2"></i><span data-i18n
+                                        data-th="การเชื่อมต่อ third-party"
+                                        data-en="Third-party integrations">การเชื่อมต่อ third-party</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><span data-i18n data-th="3 รายการ" data-en="3 items">3
+                                        รายการ</span></td>
+                                <td class="text-center"><i class="fas fa-infinity text-success"></i> <span data-i18n
+                                        data-th="ไม่จำกัด" data-en="Unlimited">ไม่จำกัด</span></td>
+                            </tr>
+
+                            <!-- Security -->
+                            <tr class="category-row">
+                                <td colspan="4" class="fw-bold ps-4 py-2"
+                                    style="background: rgba(102, 126, 234, 0.08); color: #667eea;">
+                                    <i class="fas fa-shield-halved me-2"></i><span data-i18n data-th="ความปลอดภัย"
+                                        data-en="Security">ความปลอดภัย</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-lock text-muted me-2"></i><span data-i18n
+                                        data-th="SSL Encryption" data-en="SSL Encryption">SSL Encryption</span></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-cloud-arrow-up text-muted me-2"></i><span data-i18n
+                                        data-th="สำรองข้อมูลอัตโนมัติ"
+                                        data-en="Automatic backup">สำรองข้อมูลอัตโนมัติ</span></td>
+                                <td class="text-center"><span data-i18n data-th="รายสัปดาห์"
+                                        data-en="Weekly">รายสัปดาห์</span></td>
+                                <td class="text-center"><span data-i18n data-th="รายวัน" data-en="Daily">รายวัน</span>
+                                </td>
+                                <td class="text-center"><span data-i18n data-th="เรียลไทม์"
+                                        data-en="Real-time">เรียลไทม์</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-user-shield text-muted me-2"></i><span data-i18n
+                                        data-th="2FA Authentication" data-en="2FA Authentication">2FA
+                                        Authentication</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+
+                            <!-- Support -->
+                            <tr class="category-row">
+                                <td colspan="4" class="fw-bold ps-4 py-2"
+                                    style="background: rgba(102, 126, 234, 0.08); color: #667eea;">
+                                    <i class="fas fa-headset me-2"></i><span data-i18n data-th="การสนับสนุน"
+                                        data-en="Support">การสนับสนุน</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-envelope text-muted me-2"></i><span data-i18n
+                                        data-th="อีเมลซัพพอร์ต" data-en="Email support">อีเมลซัพพอร์ต</span></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-comments text-muted me-2"></i><span data-i18n
+                                        data-th="แชทสด" data-en="Live chat">แชทสด</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-phone text-muted me-2"></i><span data-i18n
+                                        data-th="ซัพพอร์ต 24/7" data-en="24/7 support">ซัพพอร์ต 24/7</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-user-tie text-muted me-2"></i><span data-i18n
+                                        data-th="เจ้าหน้าที่ดูแลเฉพาะ"
+                                        data-en="Dedicated account manager">เจ้าหน้าที่ดูแลเฉพาะ</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4"><i class="fas fa-file-contract text-muted me-2"></i><span data-i18n
+                                        data-th="SLA รับประกัน" data-en="SLA guarantee">SLA รับประกัน</span></td>
+                                <td class="text-center"><i class="fas fa-xmark text-danger"></i></td>
+                                <td class="text-center"><span data-i18n data-th="99.5%" data-en="99.5%">99.5%</span>
+                                </td>
+                                <td class="text-center"><span data-i18n data-th="99.99%" data-en="99.99%">99.99%</span>
+                                </td>
+                            </tr>
+
+                            <!-- Action Row -->
+                            <tr style="background: #f8f9fa;">
+                                <td class="ps-4 fw-bold"><i class="fas fa-hand-pointer text-primary me-2"></i><span
+                                        data-i18n data-th="เลือกแผน" data-en="Choose Plan">เลือกแผน</span></td>
+                                <td class="text-center py-3">
+                                    <a href="#contact" class="btn btn-outline-success btn-sm rounded-pill px-3">
+                                        <i class="fas fa-cart-plus me-1"></i><span data-i18n data-th="เลือก"
+                                            data-en="Select">เลือก</span>
+                                    </a>
+                                </td>
+                                <td class="text-center py-3" style="background: rgba(102, 126, 234, 0.05);">
+                                    <a href="#contact" class="btn btn-primary btn-sm rounded-pill px-3 shadow-sm">
+                                        <i class="fas fa-cart-plus me-1"></i><span data-i18n data-th="เลือก"
+                                            data-en="Select">เลือก</span>
+                                    </a>
+                                </td>
+                                <td class="text-center py-3">
+                                    <a href="#contact" class="btn btn-dark btn-sm rounded-pill px-3">
+                                        <i class="fas fa-envelope me-1"></i><span data-i18n data-th="ติดต่อ"
+                                            data-en="Contact">ติดต่อ</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- bootstrap scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
