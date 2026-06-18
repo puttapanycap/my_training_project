@@ -61,13 +61,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link aurora-nav-link" href="#register">
+                            <i class="fas fa-user-plus"></i>
+                            <span data-i18n data-th="สมัครสมาชิก" data-en="Register">สมัครสมาชิก</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link aurora-nav-link" href="#">
                             <i class="fas fa-right-to-bracket"></i>
                             <span data-i18n data-th="เข้าสู่ระบบ" data-en="Login">เข้าสู่ระบบ</span>
                         </a>
                     </li>
                     <li class="nav-item ms-lg-2">
-                        <a class="btn aurora-btn aurora-btn-glow aurora-btn-sm" href="#pricing">
+                        <a class="btn aurora-btn aurora-btn-glow aurora-btn-sm" href="#register">
                             <i class="fas fa-rocket me-1"></i>
                             <span data-i18n data-th="สมัครใช้งาน" data-en="Get Started">สมัครใช้งาน</span>
                         </a>
@@ -966,6 +972,319 @@
 
                 <!-- X axis labels -->
                 <div class="graph-x-labels" id="graphXLabels"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= REGISTER ================= -->
+    <section id="register" class="aurora-register">
+        <div class="container py-5">
+            <div class="row align-items-center justify-content-center g-5">
+                <!-- Left side: Welcome / benefits -->
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="register-intro animate__animated animate__fadeInLeft">
+                        <span class="hero-eyebrow">
+                            <span class="eyebrow-dot"></span>
+                            <span data-i18n data-th="สร้างบัญชีใหม่" data-en="Create your account">สร้างบัญชีใหม่</span>
+                        </span>
+                        <h2 class="section-title">
+                            <span data-i18n data-th="เริ่มต้นใช้งาน" data-en="Get started in">เริ่มต้นใช้งาน</span>
+                            <span class="hero-title-gradient" data-i18n data-th="ภายใน 1 นาที"
+                                data-en="in just 1 minute">ภายใน 1 นาที</span>
+                        </h2>
+                        <p class="section-sub">
+                            <span data-i18n
+                                data-th="สมัครใช้งานฟรี ไม่ต้องใช้บัตรเครดิต เริ่มจัดการคิวของคุณได้ทันที"
+                                data-en="Sign up for free. No credit card required. Start managing your queues instantly.">สมัครใช้งานฟรี
+                                ไม่ต้องใช้บัตรเครดิต
+                                เริ่มจัดการคิวของคุณได้ทันที</span>
+                        </p>
+
+                        <ul class="register-benefits">
+                            <li>
+                                <span class="benefit-icon"><i class="fas fa-bolt"></i></span>
+                                <div>
+                                    <h6 class="mb-1 fw-bold" data-i18n data-th="ตั้งค่ารวดเร็ว"
+                                        data-en="Quick setup">ตั้งค่ารวดเร็ว</h6>
+                                    <p class="mb-0 small" data-i18n data-th="พร้อมใช้งานภายในไม่กี่นาที ไม่ต้องติดตั้งอะไร"
+                                        data-en="Ready in minutes. Nothing to install.">พร้อมใช้งานภายในไม่กี่นาที
+                                        ไม่ต้องติดตั้งอะไร</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon"><i class="fas fa-shield-halved"></i></span>
+                                <div>
+                                    <h6 class="mb-1 fw-bold" data-i18n data-th="ปลอดภัยระดับองค์กร"
+                                        data-en="Enterprise-grade security">ปลอดภัยระดับองค์กร</h6>
+                                    <p class="mb-0 small" data-i18n
+                                        data-th="เข้ารหัส SSL และ 2FA ปกป้องข้อมูลของคุณ"
+                                        data-en="SSL encryption and 2FA keep your data safe.">เข้ารหัส SSL และ 2FA
+                                        ปกป้องข้อมูลของคุณ</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="benefit-icon"><i class="fas fa-headset"></i></span>
+                                <div>
+                                    <h6 class="mb-1 fw-bold" data-i18n data-th="ซัพพอร์ตตลอด 24/7"
+                                        data-en="24/7 support">ซัพพอร์ตตลอด 24/7</h6>
+                                    <p class="mb-0 small" data-i18n data-th="ทีมงานพร้อมช่วยเหลือคุณทุกเมื่อ"
+                                        data-en="Our team is here whenever you need help.">ทีมงานพร้อมช่วยเหลือคุณทุกเมื่อ</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="register-trust">
+                            <div class="trust-avatars">
+                                <span class="avatar a1">A</span>
+                                <span class="avatar a2">K</span>
+                                <span class="avatar a3">P</span>
+                                <span class="avatar a4">+</span>
+                            </div>
+                            <div class="trust-text">
+                                <div class="trust-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <small data-i18n data-th="ไว้วางใจจาก 2,000+ ธุรกิจ"
+                                    data-en="Trusted by 2,000+ businesses">ไว้วางใจจาก 2,000+ ธุรกิจ</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side: Form card -->
+                <div class="col-lg-7 col-md-10">
+                    <div class="register-card glass-register animate__animated animate__fadeInUp">
+                        <div class="card-glow"></div>
+                        <div class="card-body p-4 p-md-5">
+                            <div class="text-center mb-4">
+                                <h3 class="fw-bold mb-1">
+                                    <span data-i18n data-th="สมัครสมาชิก" data-en="Sign up">สมัครสมาชิก</span>
+                                </h3>
+                                <p class="mb-0 text-secondary-soft" data-i18n
+                                    data-th="กรอกข้อมูลด้านล่างเพื่อสร้างบัญชีของคุณ"
+                                    data-en="Fill in the details below to create your account">กรอกข้อมูลด้านล่างเพื่อสร้างบัญชีของคุณ</p>
+                            </div>
+
+                            <!-- Social sign up -->
+                            <div class="register-social mb-4">
+                                <button type="button" class="social-register-btn social-google" aria-label="Sign up with Google">
+                                    <i class="fab fa-google"></i>
+                                    <span data-i18n data-th="Google" data-en="Google">Google</span>
+                                </button>
+                                <button type="button" class="social-register-btn social-facebook" aria-label="Sign up with Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span data-i18n data-th="Facebook" data-en="Facebook">Facebook</span>
+                                </button>
+                                <button type="button" class="social-register-btn social-line" aria-label="Sign up with Line">
+                                    <i class="fab fa-line"></i>
+                                    <span data-i18n data-th="LINE" data-en="LINE">LINE</span>
+                                </button>
+                            </div>
+
+                            <div class="register-divider">
+                                <span data-i18n data-th="หรือสมัครด้วยอีเมล"
+                                    data-en="or sign up with email">หรือสมัครด้วยอีเมล</span>
+                            </div>
+
+                            <form id="registerForm" class="register-form needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <!-- Full name -->
+                                    <div class="col-md-6">
+                                        <label for="regFullName" class="form-label">
+                                            <i class="fas fa-user me-1"></i>
+                                            <span data-i18n data-th="ชื่อ-นามสกุล" data-en="Full name">ชื่อ-นามสกุล</span>
+                                            <span class="required-mark">*</span>
+                                        </label>
+                                        <input type="text" class="form-control aurora-input" id="regFullName"
+                                            name="fullName" required minlength="2" maxlength="80"
+                                            data-i18n-placeholder
+                                            data-th-placeholder="เช่น สมชาย ใจดี"
+                                            data-en-placeholder="e.g. John Doe"
+                                            placeholder="เช่น สมชาย ใจดี">
+                                        <div class="invalid-feedback" data-i18n data-th="กรุณากรอกชื่อ-นามสกุล"
+                                            data-en="Please enter your full name">กรุณากรอกชื่อ-นามสกุล</div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="col-md-6">
+                                        <label for="regEmail" class="form-label">
+                                            <i class="fas fa-envelope me-1"></i>
+                                            <span data-i18n data-th="อีเมล" data-en="Email">อีเมล</span>
+                                            <span class="required-mark">*</span>
+                                        </label>
+                                        <input type="email" class="form-control aurora-input" id="regEmail"
+                                            name="email" required
+                                            data-i18n-placeholder data-th-placeholder="name@company.com"
+                                            data-en-placeholder="name@company.com" placeholder="name@company.com"
+                                            autocomplete="email">
+                                        <div class="invalid-feedback" data-i18n
+                                            data-th="กรุณากรอกอีเมลให้ถูกต้อง"
+                                            data-en="Please enter a valid email">กรุณากรอกอีเมลให้ถูกต้อง</div>
+                                    </div>
+
+                                    <!-- Phone -->
+                                    <div class="col-md-6">
+                                        <label for="regPhone" class="form-label">
+                                            <i class="fas fa-phone me-1"></i>
+                                            <span data-i18n data-th="เบอร์โทรศัพท์" data-en="Phone number">เบอร์โทรศัพท์</span>
+                                        </label>
+                                        <input type="tel" class="form-control aurora-input" id="regPhone"
+                                            name="phone" maxlength="20" data-validate-phone="true"
+                                            data-i18n-placeholder data-th-placeholder="08x-xxx-xxxx"
+                                            data-en-placeholder="08x-xxx-xxxx" placeholder="08x-xxx-xxxx"
+                                            autocomplete="tel">
+                                        <div class="invalid-feedback" data-i18n
+                                            data-th="กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง"
+                                            data-en="Please enter a valid phone number">กรุณากรอกเบอร์โทรศัพท์ให้ถูกต้อง</div>
+                                    </div>
+
+                                    <!-- Company -->
+                                    <div class="col-md-6">
+                                        <label for="regCompany" class="form-label">
+                                            <i class="fas fa-building me-1"></i>
+                                            <span data-i18n data-th="ชื่อธุรกิจ/บริษัท" data-en="Company name">ชื่อธุรกิจ/บริษัท</span>
+                                            <span class="required-mark">*</span>
+                                        </label>
+                                        <input type="text" class="form-control aurora-input" id="regCompany"
+                                            name="company" required minlength="2" maxlength="100"
+                                            data-i18n-placeholder data-th-placeholder="เช่น บริษัท คิวอัจฉริยะ จำกัด"
+                                            data-en-placeholder="e.g. Smart Queue Co., Ltd."
+                                            placeholder="เช่น บริษัท คิวอัจฉริยะ จำกัด"
+                                            autocomplete="organization">
+                                        <div class="invalid-feedback" data-i18n
+                                            data-th="กรุณากรอกชื่อธุรกิจ/บริษัท"
+                                            data-en="Please enter your company name">กรุณากรอกชื่อธุรกิจ/บริษัท</div>
+                                    </div>
+
+                                    <!-- Password -->
+                                    <div class="col-md-6">
+                                        <label for="regPassword" class="form-label">
+                                            <i class="fas fa-lock me-1"></i>
+                                            <span data-i18n data-th="รหัสผ่าน" data-en="Password">รหัสผ่าน</span>
+                                            <span class="required-mark">*</span>
+                                        </label>
+                                        <div class="input-group aurora-input-group">
+                                            <input type="password" class="form-control aurora-input" id="regPassword"
+                                                name="password" required minlength="8" maxlength="64"
+                                                data-i18n-placeholder data-th-placeholder="อย่างน้อย 8 ตัวอักษร"
+                                                data-en-placeholder="At least 8 characters"
+                                                placeholder="อย่างน้อย 8 ตัวอักษร"
+                                                autocomplete="new-password">
+                                            <button type="button" class="btn aurora-input-toggle"
+                                                data-toggle="regPassword" aria-label="Toggle password visibility">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <div class="password-strength mt-2" id="passwordStrength" aria-hidden="true">
+                                            <div class="password-strength-bar">
+                                                <span class="seg"></span>
+                                                <span class="seg"></span>
+                                                <span class="seg"></span>
+                                                <span class="seg"></span>
+                                            </div>
+                                            <small class="password-strength-label" data-i18n data-th="ความแข็งแรงของรหัสผ่าน"
+                                                data-en="Password strength">ความแข็งแรงของรหัสผ่าน</small>
+                                        </div>
+                                        <div class="invalid-feedback" data-i18n
+                                            data-th="รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร"
+                                            data-en="Password must be at least 8 characters">รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร</div>
+                                    </div>
+
+                                    <!-- Confirm password -->
+                                    <div class="col-md-6">
+                                        <label for="regConfirmPassword" class="form-label">
+                                            <i class="fas fa-lock me-1"></i>
+                                            <span data-i18n data-th="ยืนยันรหัสผ่าน" data-en="Confirm password">ยืนยันรหัสผ่าน</span>
+                                            <span class="required-mark">*</span>
+                                        </label>
+                                        <div class="input-group aurora-input-group">
+                                            <input type="password" class="form-control aurora-input"
+                                                id="regConfirmPassword" name="confirmPassword" required minlength="8"
+                                                maxlength="64"
+                                                data-i18n-placeholder data-th-placeholder="กรอกรหัสผ่านอีกครั้ง"
+                                                data-en-placeholder="Re-enter your password"
+                                                placeholder="กรอกรหัสผ่านอีกครั้ง"
+                                                autocomplete="new-password">
+                                            <button type="button" class="btn aurora-input-toggle"
+                                                data-toggle="regConfirmPassword"
+                                                aria-label="Toggle confirm password visibility">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback" data-i18n
+                                            data-th="รหัสผ่านยืนยันไม่ตรงกัน"
+                                            data-en="Passwords do not match">รหัสผ่านยืนยันไม่ตรงกัน</div>
+                                    </div>
+
+                                    <!-- Plan -->
+                                    <div class="col-12">
+                                        <label for="regPlan" class="form-label">
+                                            <i class="fas fa-tags me-1"></i>
+                                            <span data-i18n data-th="แผนที่สนใจ" data-en="Plan of interest">แผนที่สนใจ</span>
+                                            <span class="required-mark">*</span>
+                                        </label>
+                                        <select class="form-select aurora-input aurora-select" id="regPlan" name="plan"
+                                            required>
+                                            <option value="" disabled selected data-i18n data-th="เลือกแผนของคุณ"
+                                                data-en="Select your plan">เลือกแผนของคุณ</option>
+                                            <option value="basic" data-i18n data-th="เบสิก — ฿499/เดือน"
+                                                data-en="Basic — ฿499/mo">เบสิก — ฿499/เดือน</option>
+                                            <option value="pro" data-i18n data-th="โปร — ฿1,499/เดือน (แนะนำ)"
+                                                data-en="Pro — ฿1,499/mo (Popular)">โปร — ฿1,499/เดือน (แนะนำ)</option>
+                                            <option value="enterprise" data-i18n data-th="องค์กร — ติดต่อเรา"
+                                                data-en="Enterprise — Contact us">องค์กร — ติดต่อเรา</option>
+                                        </select>
+                                        <div class="invalid-feedback" data-i18n data-th="กรุณาเลือกแผน"
+                                            data-en="Please select a plan">กรุณาเลือกแผน</div>
+                                    </div>
+
+                                    <!-- Terms -->
+                                    <div class="col-12">
+                                        <div class="form-check aurora-check">
+                                            <input class="form-check-input" type="checkbox" id="regTerms" name="terms"
+                                                required>
+                                            <label class="form-check-label" for="regTerms">
+                                                <span data-i18n data-th="ฉันยอมรับ" data-en="I agree to the">ฉันยอมรับ</span>
+                                                <a href="#" class="register-link"
+                                                    data-i18n data-th="เงื่อนไขการใช้งาน"
+                                                    data-en="Terms of Service">เงื่อนไขการใช้งาน</a>
+                                                <span data-i18n data-th="และ" data-en="and">และ</span>
+                                                <a href="#" class="register-link" data-i18n
+                                                    data-th="นโยบายความเป็นส่วนตัว"
+                                                    data-en="Privacy Policy">นโยบายความเป็นส่วนตัว</a>
+                                            </label>
+                                        </div>
+                                        <div class="invalid-feedback" data-i18n
+                                            data-th="คุณต้องยอมรับเงื่อนไขก่อนดำเนินการต่อ"
+                                            data-en="You must accept the terms to continue">คุณต้องยอมรับเงื่อนไขก่อนดำเนินการต่อ</div>
+                                    </div>
+
+                                    <!-- Submit -->
+                                    <div class="col-12">
+                                        <button type="submit" class="btn aurora-btn aurora-btn-primary aurora-btn-glow w-100"
+                                            id="registerSubmit">
+                                            <span class="spinner" aria-hidden="true"></span>
+                                            <i class="fas fa-user-plus me-2 submit-icon"></i>
+                                            <span class="submit-text" data-i18n data-th="สมัครสมาชิก"
+                                                data-en="Create account">สมัครสมาชิก</span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Login link -->
+                                    <div class="col-12 text-center mt-2">
+                                        <span data-i18n data-th="มีบัญชีอยู่แล้ว?" data-en="Already have an account?">มีบัญชีอยู่แล้ว?</span>
+                                        <a href="#" class="register-link fw-semibold" data-i18n data-th="เข้าสู่ระบบ"
+                                            data-en="Sign in">เข้าสู่ระบบ</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
