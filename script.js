@@ -122,3 +122,80 @@
         init();
     }
 })();
+
+/**
+ * Comparison Table Category Filter
+ *
+ * Filters the rows of the pricing comparison table by clicking the
+ * category pills above the table. Each table row that is not a
+ * category header or the action row must have a `data-category`
+ * attribute matching one of the filter values.
+ *
+ * Supported filter values: "all", "core", "reports", "custom",
+ * "api", "security", "support".
+ */
+(function () {
+    'use strict';
+
+    function init() {
+        const filter = document.getElementById('comparisonFilter');
+        const table = document.querySelector('.comparison-table');
+        if (!filter || !table) {
+            return;
+        }
+
+        const buttons = filter.querySelectorAll('[data-filter]');
+        const categoryRows = table.querySelectorAll('tr.category-row');
+        const dataRows = table.querySelectorAll('tr[data-category]');
+        const actionRow = table.querySelector('tr.action-row');
+
+        function applyFilter(value) {
+            // Toggle button active state
+            buttons.forEach(function (btn) {
+                if (btn.getAttribute('data-filter') === value) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Show/hide data rows
+            dataRows.forEach(function (row) {
+                const match = value === 'all' || row.getAttribute('data-category') === value;
+                row.style.display = match ? '' : 'none';
+            });
+
+            // Show/hide category headers - only show those that have at
+            // least one visible row in the current filter.
+            categoryRows.forEach(function (catRow) {
+                const cat = catRow.getAttribute('data-category');
+                if (value === 'all') {
+                    catRow.style.display = '';
+                } else {
+                    catRow.style.display = (cat === value) ? '' : 'none';
+                }
+            });
+
+            // Always show the action row
+            if (actionRow) {
+                actionRow.style.display = '';
+            }
+        }
+
+        buttons.forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const value = this.getAttribute('data-filter');
+                if (value) {
+                    applyFilter(value);
+                }
+            });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();

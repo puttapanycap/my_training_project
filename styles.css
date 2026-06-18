@@ -189,46 +189,394 @@
     padding-top: 2rem;
 }
 
+/* Category filter pills */
+.comparison-filter .nav-link {
+    background: #fff;
+    color: #555;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 999px !important;
+    padding: 0.5rem 1.1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.06);
+    transition: all 0.25s ease;
+}
+
+.comparison-filter .nav-link i {
+    font-size: 0.85rem;
+    color: #667eea;
+    transition: color 0.25s ease;
+}
+
+.comparison-filter .nav-link:hover {
+    color: #4a5bd1;
+    border-color: rgba(102, 126, 234, 0.45);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(102, 126, 234, 0.18);
+}
+
+.comparison-filter .nav-link.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 8px 18px rgba(118, 75, 162, 0.35);
+}
+
+.comparison-filter .nav-link.active i {
+    color: #ffd700;
+}
+
+/* Scrollable table container with sticky header */
+.comparison-table-scroll {
+    max-height: 70vh;
+    overflow: auto;
+    border: 1px solid rgba(102, 126, 234, 0.12);
+}
+
+.comparison-table-scroll thead th {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-table-scroll .feature-col {
+    position: sticky;
+    left: 0;
+    z-index: 6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-width: 240px;
+}
+
+.comparison-table-scroll .feature-col::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -8px;
+    bottom: 0;
+    width: 8px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.12), transparent);
+    pointer-events: none;
+}
+
+.comparison-table-scroll tbody td.feature-cell {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: #fff;
+    box-shadow: inset -1px 0 0 rgba(102, 126, 234, 0.12);
+}
+
+.comparison-table-scroll tbody tr:hover td.feature-cell {
+    background: rgba(102, 126, 234, 0.06);
+}
+
+.comparison-table-scroll .plan-col-pro {
+    background: rgba(102, 126, 234, 0.04);
+}
+
 .comparison-table thead th {
     font-weight: 600;
     padding: 1.25rem 0.75rem;
     border: none;
     font-size: 0.95rem;
+    vertical-align: middle;
 }
 
 .comparison-table thead th small {
     font-size: 0.75rem;
 }
 
-.comparison-table tbody td {
-    padding: 0.9rem 0.75rem;
-    border-color: rgba(102, 126, 234, 0.1);
+/* Plan header layout in the table */
+.plan-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0;
 }
 
-.comparison-table tbody tr:hover {
+.plan-header .plan-icon {
+    font-size: 1.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.plan-header .plan-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.3px;
+}
+
+.plan-header .plan-price {
+    font-size: 0.78rem;
+    font-weight: 500;
+    opacity: 0.85;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    display: inline-block;
+}
+
+/* "POPULAR" ribbon on the Pro column */
+.comparison-table thead th.plan-col-pro {
+    position: relative;
+    overflow: visible;
+    background: linear-gradient(135deg, #5a6dd0 0%, #6a3d9e 100%);
+}
+
+.comparison-table thead th.plan-col-pro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.5) 0%, rgba(118, 75, 162, 0.5) 100%);
+    z-index: 0;
+}
+
+.comparison-table thead th.plan-col-pro > * {
+    position: relative;
+    z-index: 1;
+}
+
+.comparison-table .ribbon {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
+    color: #4a3500;
+    padding: 0.25rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    box-shadow: 0 4px 10px rgba(255, 170, 0, 0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.comparison-table .ribbon i {
+    color: #b8860b;
+    font-size: 0.7rem;
+}
+
+.comparison-table tbody td {
+    padding: 0.95rem 0.75rem;
+    border-color: rgba(102, 126, 234, 0.08);
+    vertical-align: middle;
+    transition: background 0.2s ease;
+}
+
+.comparison-table tbody tr:not(.category-row):not(.action-row) {
+    transition: background 0.2s ease;
+}
+
+.comparison-table tbody tr:not(.category-row):not(.action-row):hover {
     background: rgba(102, 126, 234, 0.04);
 }
 
+.comparison-table tbody tr:not(.category-row):not(.action-row):hover td.plan-col-pro {
+    background: rgba(102, 126, 234, 0.08);
+}
+
+.comparison-table tbody tr.action-row td {
+    border-top: 2px solid rgba(102, 126, 234, 0.12);
+    background: #fafbff;
+}
+
+.comparison-table tbody tr.action-row td.plan-col-pro {
+    background: rgba(102, 126, 234, 0.06);
+}
+
+/* Feature cell content */
+.comparison-table .feature-cell {
+    display: table-cell;
+    font-weight: 500;
+    color: #2d3748;
+}
+
+.comparison-table .feature-cell i {
+    margin-right: 0.5rem;
+    font-size: 0.95rem;
+    width: 1.1rem;
+    text-align: center;
+}
+
+/* Category row */
 .comparison-table .category-row td {
+    background: linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.06) 100%);
+    color: #4a5bd1;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.75rem 1rem !important;
+    border-top: 2px solid rgba(102, 126, 234, 0.18);
+    border-bottom: 1px solid rgba(102, 126, 234, 0.08);
+    position: relative;
+}
+
+.comparison-table .category-row td::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+}
+
+.comparison-table .category-cell {
+    display: flex !important;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.comparison-table .category-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    font-size: 0.75rem;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+/* Value pills */
+.value-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 600;
     font-size: 0.85rem;
-    border-top: 2px solid rgba(102, 126, 234, 0.15);
+    line-height: 1;
+    white-space: nowrap;
+    border: 1px solid transparent;
 }
 
-.comparison-table .fa-xmark {
+.value-pill.value-success {
+    background: rgba(25, 135, 84, 0.12);
+    color: #146c43;
+    border-color: rgba(25, 135, 84, 0.25);
+}
+
+.value-pill.value-success i {
+    color: #198754;
+    font-weight: 900;
+}
+
+.value-pill.value-danger {
+    background: rgba(220, 53, 69, 0.12);
+    color: #b02a37;
+    border-color: rgba(220, 53, 69, 0.22);
+}
+
+.value-pill.value-danger i {
     color: #dc3545;
-    font-size: 1.1rem;
+    font-weight: 900;
 }
 
-.comparison-table .fa-check {
-    color: #198754;
-    font-size: 1.1rem;
+.value-pill.value-warning {
+    background: rgba(255, 193, 7, 0.18);
+    color: #997404;
+    border-color: rgba(255, 193, 7, 0.35);
 }
 
-.comparison-table .fa-infinity {
+.value-pill.value-warning i {
+    color: #cc9a06;
+}
+
+.value-pill.value-primary {
+    background: rgba(102, 126, 234, 0.14);
+    color: #4a5bd1;
+    border-color: rgba(102, 126, 234, 0.28);
+}
+
+.value-pill.value-neutral {
+    background: rgba(108, 117, 125, 0.1);
+    color: #495057;
+    border-color: rgba(108, 117, 125, 0.2);
+}
+
+/* Action row buttons */
+.btn-compare {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.btn-compare-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    box-shadow: 0 6px 14px rgba(102, 126, 234, 0.4);
+}
+
+.btn-compare-primary:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(102, 126, 234, 0.5);
+}
+
+.btn-compare-outline-success {
+    background: #fff;
     color: #198754;
-    font-size: 1.2rem;
+    border-color: #198754;
+}
+
+.btn-compare-outline-success:hover {
+    background: #198754;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(25, 135, 84, 0.3);
+}
+
+.btn-compare-dark {
+    background: #212529;
+    color: #fff;
+}
+
+.btn-compare-dark:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Filter animation */
+.comparison-table tbody tr {
+    animation: fadeInRow 0.3s ease;
+}
+
+@keyframes fadeInRow {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -238,7 +586,34 @@
     }
 
     .comparison-table tbody td {
-        font-size: 0.85rem;
-        padding: 0.6rem 0.4rem;
+        font-size: 0.82rem;
+        padding: 0.65rem 0.4rem;
+    }
+
+    .comparison-table-scroll .feature-col {
+        min-width: 180px;
+    }
+
+    .value-pill {
+        padding: 0.25rem 0.55rem;
+        font-size: 0.78rem;
+    }
+
+    .plan-header .plan-icon {
+        font-size: 1.2rem;
+    }
+
+    .plan-header .plan-name {
+        font-size: 0.95rem;
+    }
+
+    .comparison-table .ribbon {
+        font-size: 0.62rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .btn-compare {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.78rem;
     }
 }
