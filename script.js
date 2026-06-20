@@ -1016,3 +1016,74 @@
         init();
     }
 })();
+
+/**
+ * Floating Navbar on Scroll
+ *
+ * Adds the `is-scrolled` class to the navbar once the user has
+ * scrolled past a small threshold. The class morphs the inner
+ * .aurora-navbar-pill from a full-width strip into a centered
+ * floating pill (rounded corners, max-width, drop shadow) via the
+ * CSS transitions in styles.css.
+ *
+ * - Uses requestAnimationFrame to throttle scroll handling.
+ * - Reads the threshold from a CSS custom property
+ *   (--navbar-scroll-threshold) so it can be tuned without code
+ *   changes; falls back to 24px.
+ * - Updates data-scrolled mirror attribute so assistive tech can
+ *   tell when the visual state changes.
+ */
+(function () {
+    'use strict';
+
+    var DEFAULT_THRESHOLD = 24;
+
+    function getThreshold() {
+        var root = document.documentElement;
+        var raw = root && getComputedStyle(root).getPropertyValue('--navbar-scroll-threshold');
+        var parsed = parseInt(raw, 10);
+        return isNaN(parsed) ? DEFAULT_THRESHOLD : parsed;
+    }
+
+    function init() {
+        var nav = document.querySelector('.aurora-navbar');
+        if (!nav) return;
+
+        var threshold = getThreshold();
+        var ticking = false;
+        var isScrolled = false;
+
+        function update() {
+            var y = window.scrollY || window.pageYOffset || 0;
+            var next = y > threshold;
+            if (next !== isScrolled) {
+                isScrolled = next;
+                nav.classList.toggle('is-scrolled', next);
+                nav.setAttribute('data-scrolled', String(next));
+            }
+            ticking = false;
+        }
+
+        function onScroll() {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(update);
+        }
+
+        // Initial state (in case the page is loaded mid-scroll, e.g.
+        // after a hash-navigation or browser restore)
+        update();
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', function () {
+            threshold = getThreshold();
+            update();
+        }, { passive: true });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();

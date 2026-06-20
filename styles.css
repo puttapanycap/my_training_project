@@ -293,14 +293,76 @@ body {
 }
 
 /* ==================== NAVBAR ==================== */
+/*
+ * Outer .aurora-navbar stays transparent and acts only as a
+ * fixed-position container. The visual styling (background, blur,
+ * border, padding) lives on the inner .aurora-navbar-pill which
+ * morphs from a full-width strip into a centered floating pill
+ * when the page is scrolled (toggled via .is-scrolled in JS).
+ */
 .aurora-navbar {
+    padding: 0;
+    z-index: 1030;
+    transition: padding 0.35s var(--ease);
+}
+
+.aurora-navbar-pill {
+    /* The parent <nav> is display:flex (Bootstrap .navbar), so a plain
+     * block child without an explicit width would shrink-wrap to its
+     * content. Force the pill to span the full nav width in both
+     * default and scrolled states. */
+    width: 100%;
     background: var(--navbar-bg);
     backdrop-filter: blur(20px) saturate(160%);
     -webkit-backdrop-filter: blur(20px) saturate(160%);
     border-bottom: 1px solid var(--glass-border);
+    border-radius: 0;
     padding: 0.85rem 0;
-    z-index: 1030;
-    transition: all 0.3s var(--ease);
+    box-shadow: none;
+    /* Needed so the mobile collapse menu can be absolutely
+     * positioned just below the pill (outside its rounded shape). */
+    position: relative;
+    transition:
+        border-radius 0.45s var(--ease),
+        padding 0.35s var(--ease),
+        background 0.4s var(--ease),
+        border-color 0.4s var(--ease),
+        box-shadow 0.4s var(--ease),
+        transform 0.45s var(--ease);
+}
+
+/* The inner .container must behave like the direct child of a
+ * Bootstrap .navbar (which is display:flex). Without this, the
+ * brand, toggler and collapse stack vertically and the navbar
+ * doubles in height. Promote the container to a flex container so
+ * the brand sits on the left and the menu sits on the right in
+ * the same row. */
+.aurora-navbar-pill > .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aurora-navbar.is-scrolled {
+    padding: 1rem 1.5rem;
+}
+
+.aurora-navbar.is-scrolled .aurora-navbar-pill {
+    border-radius: 999px;
+    border: 1px solid var(--glass-border-strong);
+    border-bottom-color: var(--glass-border-strong);
+    padding: 0.55rem 1.5rem;
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    transform: translateY(0);
+}
+
+[data-theme="light"] .aurora-navbar.is-scrolled .aurora-navbar-pill {
+    box-shadow:
+        0 14px 38px rgba(13, 19, 48, 0.12),
+        0 2px 10px rgba(13, 19, 48, 0.08);
 }
 
 .aurora-brand {
@@ -337,6 +399,13 @@ body {
     align-items: center;
     gap: 0.45rem;
     position: relative;
+    white-space: nowrap;
+}
+
+/* Keep all nav items in a single row, even when the viewport
+ * is narrow enough that the items would otherwise wrap. */
+.aurora-navbar .navbar-nav {
+    flex-wrap: nowrap;
 }
 
 .aurora-nav-link i {
@@ -376,8 +445,24 @@ body {
         backdrop-filter: blur(20px);
         border: 1px solid var(--glass-border);
         border-radius: var(--radius-md);
-        margin-top: 1rem;
         padding: 1rem;
+        /* Pull the menu out of the pill's flow and place it just
+         * below the pill so it appears OUTSIDE the navbar (not
+         * trapped inside the pill's rounded shape). */
+        position: absolute;
+        top: calc(100% + 0.75rem);
+        left: 0;
+        right: 0;
+        z-index: 1030;
+    }
+
+    /* When the floating pill is active on mobile, the collapse menu
+       must span the full width of the pill (not stay centered with
+       the pill's max-width) so the tap targets stay reachable. */
+    .aurora-navbar.is-scrolled .navbar-collapse {
+        max-width: calc(100vw - 2rem);
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .aurora-nav-link {

@@ -48,72 +48,74 @@
     </div>
 
     <!-- ================= NAVBAR ================= -->
-    <nav class="navbar navbar-expand-lg aurora-navbar sticky-top">
-        <div class="container">
-            <a class="navbar-brand aurora-brand" href="#">
-                <span class="brand-mark"><i class="fas fa-users-line"></i></span>
-                <span data-i18n data-th="คิวอัจฉริยะ" data-en="Smart Queue">คิวอัจฉริยะ</span>
-            </a>
-            <button class="navbar-toggler aurora-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item">
-                        <a class="nav-link aurora-nav-link" href="#features">
-                            <i class="fas fa-star"></i>
-                            <span data-i18n data-th="ฟีเจอร์" data-en="Features">ฟีเจอร์</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link aurora-nav-link" href="#pricing">
-                            <i class="fas fa-tags"></i>
-                            <span data-i18n data-th="ราคา" data-en="Pricing">ราคา</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link aurora-nav-link" href="#partners">
-                            <i class="fas fa-handshake"></i>
-                            <span data-i18n data-th="พันธมิตร" data-en="Partners">พันธมิตร</span>
-                        </a>
-                    </li>
-                    <li class="nav-item ms-lg-2">
-                        <a class="btn aurora-btn aurora-btn-rainbow aurora-btn-sm" href="#register">
-                            <i class="fas fa-rocket me-1"></i>
-                            <span data-i18n data-th="สมัครสมาชิก" data-en="Sign up">สมัครสมาชิก</span>
-                        </a>
-                    </li>
-                    <li class="nav-item ms-lg-2">
-                        <button type="button" id="themeToggle" class="theme-toggle"
-                            aria-label="Toggle color theme" aria-pressed="false"
-                            title="Toggle theme">
-                            <i class="fas fa-sun theme-icon-sun" aria-hidden="true"></i>
-                            <i class="fas fa-moon theme-icon-moon" aria-hidden="true"></i>
-                        </button>
-                    </li>
-                    <li class="nav-item dropdown lang-switcher">
-                        <a class="nav-link aurora-nav-link aurora-lang-toggle" href="#" id="langDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language switcher">
-                            <i class="fas fa-globe"></i>
-                            <span id="currentLangLabel">TH</span>
-                            <i class="fas fa-chevron-down lang-caret"></i>
-                        </a>
-                        <ul class="dropdown-menu aurora-dropdown" aria-labelledby="langDropdown">
-                            <li>
-                                <a class="dropdown-item lang-switch" href="#" data-lang="th">
-                                    <span class="flag">🇹🇭</span> ภาษาไทย
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item lang-switch" href="#" data-lang="en">
-                                    <span class="flag">🇬🇧</span> English
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+    <nav class="navbar navbar-expand-lg aurora-navbar fixed-top">
+        <div class="aurora-navbar-pill">
+            <div class="container">
+                <a class="navbar-brand aurora-brand" href="#">
+                    <span class="brand-mark"><i class="fas fa-users-line"></i></span>
+                    <span data-i18n data-th="คิวอัจฉริยะ" data-en="Smart Queue">คิวอัจฉริยะ</span>
+                </a>
+                <button class="navbar-toggler aurora-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link aurora-nav-link" href="#features">
+                                <i class="fas fa-star"></i>
+                                <span data-i18n data-th="ฟีเจอร์" data-en="Features">ฟีเจอร์</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link aurora-nav-link" href="#pricing">
+                                <i class="fas fa-tags"></i>
+                                <span data-i18n data-th="ราคา" data-en="Pricing">ราคา</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link aurora-nav-link" href="#partners">
+                                <i class="fas fa-handshake"></i>
+                                <span data-i18n data-th="พันธมิตร" data-en="Partners">พันธมิตร</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn aurora-btn aurora-btn-rainbow aurora-btn-sm" href="#register">
+                                <i class="fas fa-rocket me-1"></i>
+                                <span data-i18n data-th="สมัครสมาชิก" data-en="Sign up">สมัครสมาชิก</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <button type="button" id="themeToggle" class="theme-toggle"
+                                aria-label="Toggle color theme" aria-pressed="false"
+                                title="Toggle theme">
+                                <i class="fas fa-sun theme-icon-sun" aria-hidden="true"></i>
+                                <i class="fas fa-moon theme-icon-moon" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item dropdown lang-switcher">
+                            <a class="nav-link aurora-nav-link aurora-lang-toggle" href="#" id="langDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language switcher">
+                                <i class="fas fa-globe"></i>
+                                <span id="currentLangLabel">TH</span>
+                                <i class="fas fa-chevron-down lang-caret"></i>
+                            </a>
+                            <ul class="dropdown-menu aurora-dropdown" aria-labelledby="langDropdown">
+                                <li>
+                                    <a class="dropdown-item lang-switch" href="#" data-lang="th">
+                                        <span class="flag">🇹🇭</span> ภาษาไทย
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item lang-switch" href="#" data-lang="en">
+                                        <span class="flag">🇬🇧</span> English
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>

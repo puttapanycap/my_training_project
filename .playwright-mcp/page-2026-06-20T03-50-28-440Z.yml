@@ -1,0 +1,635 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "คิวอัจฉริยะ" [ref=e5] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e7]: คิวอัจฉริยะ
+      - button "Toggle navigation" [ref=e8] [cursor=pointer]
+      - text:        
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e16]: Next-Gen Queue Management
+        - heading "ระบบจัดการคิวอัจฉริยะ ที่ลื่นไหลกว่าเดิม" [level=1] [ref=e17]:
+          - text: ระบบจัดการคิวอัจฉริยะ
+          - generic [ref=e18]: ที่ลื่นไหลกว่าเดิม
+        - paragraph [ref=e19]: ลาก่อนการรอคอยนานๆ ระบบจัดการคิวอัจฉริยะของเราช่วยเพิ่มประสิทธิภาพ ลดเวลารอ และทำให้ลูกค้าของคุณมีความสุข
+        - generic [ref=e20]:
+          - link " เริ่มต้นใช้งาน" [ref=e21] [cursor=pointer]:
+            - /url: "#features"
+            - generic [ref=e22]: 
+            - generic [ref=e23]: เริ่มต้นใช้งาน
+          - link " เรียนรู้เพิ่มเติม" [ref=e24] [cursor=pointer]:
+            - /url: "#pricing"
+            - generic [ref=e25]: 
+            - generic [ref=e26]: เรียนรู้เพิ่มเติม
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - generic [ref=e29]: A
+            - generic [ref=e30]: K
+            - generic [ref=e31]: P
+            - generic [ref=e32]: +
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - generic [ref=e35]: 
+              - generic [ref=e36]: 
+              - generic [ref=e37]: 
+              - generic [ref=e38]: 
+              - generic [ref=e39]: 
+            - text: ไว้วางใจจาก 2,000+ ธุรกิจ
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e46]: 
+          - generic [ref=e47]:
+            - generic [ref=e48]: เวลารอเฉลี่ย
+            - generic [ref=e49]: 3.2 นาที
+        - generic [ref=e50]:
+          - generic [ref=e52]: 
+          - generic [ref=e53]:
+            - generic [ref=e54]: คิววันนี้
+            - generic [ref=e55]: "128"
+        - generic [ref=e56]:
+          - generic [ref=e58]: 
+          - generic [ref=e59]:
+            - generic [ref=e60]: ความพึงพอใจ
+            - generic [ref=e61]: 98%
+    - generic [ref=e62]:
+      - generic [ref=e64]:
+        - generic [ref=e66]: 
+        - heading "ลดเวลารอคอย" [level=5] [ref=e67]
+        - paragraph [ref=e68]: คิวสั้นลงสูงสุด 60%
+      - generic [ref=e70]:
+        - generic [ref=e72]: 
+        - heading "วิเคราะห์แบบเรียลไทม์" [level=5] [ref=e73]
+        - paragraph [ref=e74]: ตรวจสอบและปรับปรุงได้ทันที
+      - generic [ref=e76]:
+        - heading "รองรับมือถือ" [level=5] [ref=e78]
+        - paragraph [ref=e79]: จองคิวได้จากทุกที่
+  - generic [ref=e81]:
+    - generic [ref=e82]:
+      - generic [ref=e85]: แผนราคา
+      - heading "แผนราคาของเรา" [level=2] [ref=e86]
+      - paragraph [ref=e87]: เลือกแผนที่เหมาะกับธุรกิจของคุณ
+    - generic [ref=e88]:
+      - generic [ref=e91]:
+        - generic [ref=e93]: 
+        - heading "เบสิก" [level=4] [ref=e94]
+        - paragraph [ref=e95]: สำหรับธุรกิจเริ่มต้น
+        - generic [ref=e96]:
+          - generic [ref=e97]: ฿499
+          - generic [ref=e98]: /เดือน
+        - list [ref=e99]:
+          - listitem [ref=e100]:
+            - generic [ref=e101]: 
+            - generic [ref=e102]: คิวสูงสุด 100 คิว/วัน
+          - listitem [ref=e103]:
+            - generic [ref=e104]: 
+            - generic [ref=e105]: รองรับ 1 สาขา
+          - listitem [ref=e106]:
+            - generic [ref=e107]: 
+            - generic [ref=e108]: รายงานพื้นฐาน
+          - listitem [ref=e109]:
+            - generic [ref=e110]: 
+            - generic [ref=e111]: อีเมลซัพพอร์ต
+        - link " เลือกแผนนี้" [ref=e112] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=e113]: 
+          - generic [ref=e114]: เลือกแผนนี้
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - generic [ref=e118]: 
+          - generic [ref=e119]: แนะนำ
+        - generic [ref=e120]:
+          - generic [ref=e122]: 
+          - heading "โปร" [level=4] [ref=e123]
+          - paragraph [ref=e124]: สำหรับธุรกิจที่กำลังเติบโต
+          - generic [ref=e125]:
+            - generic [ref=e126]: ฿1,499
+            - generic [ref=e127]: /เดือน
+          - list [ref=e128]:
+            - listitem [ref=e129]:
+              - generic [ref=e130]: 
+              - generic [ref=e131]: คิวไม่จำกัด
+            - listitem [ref=e132]:
+              - generic [ref=e133]: 
+              - generic [ref=e134]: รองรับ 5 สาขา
+            - listitem [ref=e135]:
+              - generic [ref=e136]: 
+              - generic [ref=e137]: รายงานขั้นสูง & เรียลไทม์
+            - listitem [ref=e138]:
+              - generic [ref=e139]: 
+              - generic [ref=e140]: ซัพพอร์ต 24/7
+            - listitem [ref=e141]:
+              - generic [ref=e142]: 
+              - generic [ref=e143]: ปรับแต่งธีมและโลโก้
+          - link " เลือกแผนนี้" [ref=e144] [cursor=pointer]:
+            - /url: "#contact"
+            - generic [ref=e145]: 
+            - generic [ref=e146]: เลือกแผนนี้
+      - generic [ref=e149]:
+        - generic [ref=e151]: 
+        - heading "องค์กร" [level=4] [ref=e152]
+        - paragraph [ref=e153]: สำหรับองค์กรขนาดใหญ่
+        - generic [ref=e155]: ติดต่อเรา
+        - list [ref=e156]:
+          - listitem [ref=e157]:
+            - generic [ref=e158]: 
+            - generic [ref=e159]: ทุกฟีเจอร์ในแผนโปร
+          - listitem [ref=e160]:
+            - generic [ref=e161]: 
+            - generic [ref=e162]: สาขาไม่จำกัด
+          - listitem [ref=e163]:
+            - generic [ref=e164]: 
+            - generic [ref=e165]: API และ Webhook
+          - listitem [ref=e166]:
+            - generic [ref=e167]: 
+            - generic [ref=e168]: เจ้าหน้าที่ดูแลเฉพาะ
+          - listitem [ref=e169]:
+            - generic [ref=e170]: 
+            - generic [ref=e171]: SLA ระดับองค์กร
+        - link " ติดต่อฝ่ายขาย" [ref=e172] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=e173]: 
+          - generic [ref=e174]: ติดต่อฝ่ายขาย
+    - generic [ref=e175]:
+      - generic [ref=e176]:
+        - generic [ref=e179]: เปรียบเทียบ
+        - heading " ตารางเปรียบเทียบแพ็กเกจ" [level=3] [ref=e180]:
+          - generic [ref=e181]: 
+          - text: ตารางเปรียบเทียบแพ็กเกจ
+        - paragraph [ref=e182]: เปรียบเทียบฟีเจอร์ทั้งหมดเพื่อเลือกแผนที่เหมาะกับคุณมากที่สุด
+      - tablist [ref=e183]:
+        - tab " ทั้งหมด" [ref=e184] [cursor=pointer]:
+          - generic [ref=e185]: 
+          - generic [ref=e186]: ทั้งหมด
+        - tab " ฟีเจอร์หลัก" [ref=e187] [cursor=pointer]:
+          - generic [ref=e188]: 
+          - generic [ref=e189]: ฟีเจอร์หลัก
+        - tab " รายงาน" [ref=e190] [cursor=pointer]:
+          - generic [ref=e191]: 
+          - generic [ref=e192]: รายงาน
+        - tab " ปรับแต่ง" [ref=e193] [cursor=pointer]:
+          - generic [ref=e194]: 
+          - generic [ref=e195]: ปรับแต่ง
+        - tab " API" [ref=e196] [cursor=pointer]:
+          - generic [ref=e197]: 
+          - generic [ref=e198]: API
+        - tab "ความปลอดภัย" [ref=e199] [cursor=pointer]:
+          - generic [ref=e200]: ความปลอดภัย
+        - tab " สนับสนุน" [ref=e201] [cursor=pointer]:
+          - generic [ref=e202]: 
+          - generic [ref=e203]: สนับสนุน
+      - table [ref=e205]:
+        - rowgroup [ref=e206]:
+          - row "ฟีเจอร์  เบสิก ฿499/เดือน  โปร ฿1,499/เดือน  องค์กร ติดต่อเรา" [ref=e207]:
+            - columnheader "ฟีเจอร์" [ref=e208]
+            - columnheader " เบสิก ฿499/เดือน" [ref=e209]:
+              - generic [ref=e210]:
+                - generic [ref=e211]: 
+                - generic [ref=e212]: เบสิก
+                - generic [ref=e213]: ฿499/เดือน
+            - columnheader " โปร ฿1,499/เดือน" [ref=e214]:
+              - generic [ref=e215]:
+                - generic [ref=e216]: 
+                - generic [ref=e217]: โปร
+                - generic [ref=e218]: ฿1,499/เดือน
+            - columnheader " องค์กร ติดต่อเรา" [ref=e219]:
+              - generic [ref=e220]:
+                - generic [ref=e221]: 
+                - generic [ref=e222]: องค์กร
+                - generic [ref=e223]: ติดต่อเรา
+        - rowgroup [ref=e224]:
+          - row " ฟีเจอร์หลัก" [ref=e225]:
+            - cell " ฟีเจอร์หลัก" [ref=e226]:
+              - generic [ref=e227]: 
+              - generic [ref=e228]: ฟีเจอร์หลัก
+          - row " จำนวนคิวต่อวัน 100 คิว  ไม่จำกัด  ไม่จำกัด" [ref=e229]:
+            - cell " จำนวนคิวต่อวัน" [ref=e230]:
+              - generic [ref=e231]: 
+              - text: จำนวนคิวต่อวัน
+            - cell "100 คิว" [ref=e232]:
+              - generic [ref=e234]: 100 คิว
+            - cell " ไม่จำกัด" [ref=e235]:
+              - generic [ref=e236]:
+                - generic [ref=e237]: 
+                - generic [ref=e238]: ไม่จำกัด
+            - cell " ไม่จำกัด" [ref=e239]:
+              - generic [ref=e240]:
+                - generic [ref=e241]: 
+                - generic [ref=e242]: ไม่จำกัด
+          - row " จำนวนสาขา 1 5  ไม่จำกัด" [ref=e243]:
+            - cell " จำนวนสาขา" [ref=e244]:
+              - generic [ref=e245]: 
+              - text: จำนวนสาขา
+            - cell "1" [ref=e246]:
+              - generic [ref=e247]: "1"
+            - cell "5" [ref=e248]:
+              - generic [ref=e249]: "5"
+            - cell " ไม่จำกัด" [ref=e250]:
+              - generic [ref=e251]:
+                - generic [ref=e252]: 
+                - generic [ref=e253]: ไม่จำกัด
+          - row " เจ้าหน้าที่ 3 15  ไม่จำกัด" [ref=e254]:
+            - cell " เจ้าหน้าที่" [ref=e255]:
+              - generic [ref=e256]: 
+              - text: เจ้าหน้าที่
+            - cell "3" [ref=e257]:
+              - generic [ref=e258]: "3"
+            - cell "15" [ref=e259]:
+              - generic [ref=e260]: "15"
+            - cell " ไม่จำกัด" [ref=e261]:
+              - generic [ref=e262]:
+                - generic [ref=e263]: 
+                - generic [ref=e264]: ไม่จำกัด
+          - row "รองรับมือถือ   " [ref=e265]:
+            - cell "รองรับมือถือ" [ref=e266]: รองรับมือถือ
+            - cell "" [ref=e267]:
+              - generic [ref=e269]: 
+            - cell "" [ref=e270]:
+              - generic [ref=e272]: 
+            - cell "" [ref=e273]:
+              - generic [ref=e275]: 
+          - row " รายงานและการวิเคราะห์" [ref=e276]:
+            - cell " รายงานและการวิเคราะห์" [ref=e277]:
+              - generic [ref=e278]: 
+              - generic [ref=e279]: รายงานและการวิเคราะห์
+          - row " รายงานพื้นฐาน   " [ref=e280]:
+            - cell " รายงานพื้นฐาน" [ref=e281]:
+              - generic [ref=e282]: 
+              - text: รายงานพื้นฐาน
+            - cell "" [ref=e283]:
+              - generic [ref=e285]: 
+            - cell "" [ref=e286]:
+              - generic [ref=e288]: 
+            - cell "" [ref=e289]:
+              - generic [ref=e291]: 
+          - row " รายงานเรียลไทม์   " [ref=e292]:
+            - cell " รายงานเรียลไทม์" [ref=e293]:
+              - generic [ref=e294]: 
+              - text: รายงานเรียลไทม์
+            - cell "" [ref=e295]:
+              - generic [ref=e297]: 
+            - cell "" [ref=e298]:
+              - generic [ref=e300]: 
+            - cell "" [ref=e301]:
+              - generic [ref=e303]: 
+          - row " ส่งออก CSV/Excel   " [ref=e304]:
+            - cell " ส่งออก CSV/Excel" [ref=e305]:
+              - generic [ref=e306]: 
+              - text: ส่งออก CSV/Excel
+            - cell "" [ref=e307]:
+              - generic [ref=e309]: 
+            - cell "" [ref=e310]:
+              - generic [ref=e312]: 
+            - cell "" [ref=e313]:
+              - generic [ref=e315]: 
+          - row " AI insights   " [ref=e316]:
+            - cell " AI insights" [ref=e317]:
+              - generic [ref=e318]: 
+              - text: AI insights
+            - cell "" [ref=e319]:
+              - generic [ref=e321]: 
+            - cell "" [ref=e322]:
+              - generic [ref=e324]: 
+            - cell "" [ref=e325]:
+              - generic [ref=e327]: 
+          - row " การปรับแต่ง" [ref=e328]:
+            - cell " การปรับแต่ง" [ref=e329]:
+              - generic [ref=e330]: 
+              - generic [ref=e331]: การปรับแต่ง
+          - row " ปรับแต่งธีมและโลโก้   " [ref=e332]:
+            - cell " ปรับแต่งธีมและโลโก้" [ref=e333]:
+              - generic [ref=e334]: 
+              - text: ปรับแต่งธีมและโลโก้
+            - cell "" [ref=e335]:
+              - generic [ref=e337]: 
+            - cell "" [ref=e338]:
+              - generic [ref=e340]: 
+            - cell "" [ref=e341]:
+              - generic [ref=e343]: 
+          - row " จำนวนภาษา 2 ภาษา 5 ภาษา ไม่จำกัด" [ref=e344]:
+            - cell " จำนวนภาษา" [ref=e345]:
+              - generic [ref=e346]: 
+              - text: จำนวนภาษา
+            - cell "2 ภาษา" [ref=e347]:
+              - generic [ref=e349]: 2 ภาษา
+            - cell "5 ภาษา" [ref=e350]:
+              - generic [ref=e352]: 5 ภาษา
+            - cell "ไม่จำกัด" [ref=e353]:
+              - generic [ref=e355]: ไม่จำกัด
+          - row " API และการเชื่อมต่อ" [ref=e356]:
+            - cell " API และการเชื่อมต่อ" [ref=e357]:
+              - generic [ref=e358]: 
+              - generic [ref=e359]: API และการเชื่อมต่อ
+          - row " REST API   " [ref=e360]:
+            - cell " REST API" [ref=e361]:
+              - generic [ref=e362]: 
+              - text: REST API
+            - cell "" [ref=e363]:
+              - generic [ref=e365]: 
+            - cell "" [ref=e366]:
+              - generic [ref=e368]: 
+            - cell "" [ref=e369]:
+              - generic [ref=e371]: 
+          - row " Webhooks   " [ref=e372]:
+            - cell " Webhooks" [ref=e373]:
+              - generic [ref=e374]: 
+              - text: Webhooks
+            - cell "" [ref=e375]:
+              - generic [ref=e377]: 
+            - cell "" [ref=e378]:
+              - generic [ref=e380]: 
+            - cell "" [ref=e381]:
+              - generic [ref=e383]: 
+          - row " Third-party integrations 3 15  ไม่จำกัด" [ref=e384]:
+            - cell " Third-party integrations" [ref=e385]:
+              - generic [ref=e386]: 
+              - text: Third-party integrations
+            - cell "3" [ref=e387]:
+              - generic [ref=e388]: "3"
+            - cell "15" [ref=e389]:
+              - generic [ref=e390]: "15"
+            - cell " ไม่จำกัด" [ref=e391]:
+              - generic [ref=e392]:
+                - generic [ref=e393]: 
+                - generic [ref=e394]: ไม่จำกัด
+          - row "ความปลอดภัย" [ref=e395]:
+            - cell "ความปลอดภัย" [ref=e396]:
+              - generic [ref=e398]: ความปลอดภัย
+          - row " SSL Encryption   " [ref=e399]:
+            - cell " SSL Encryption" [ref=e400]:
+              - generic [ref=e401]: 
+              - text: SSL Encryption
+            - cell "" [ref=e402]:
+              - generic [ref=e404]: 
+            - cell "" [ref=e405]:
+              - generic [ref=e407]: 
+            - cell "" [ref=e408]:
+              - generic [ref=e410]: 
+          - row " Two-factor auth   " [ref=e411]:
+            - cell " Two-factor auth" [ref=e412]:
+              - generic [ref=e413]: 
+              - text: Two-factor auth
+            - cell "" [ref=e414]:
+              - generic [ref=e416]: 
+            - cell "" [ref=e417]:
+              - generic [ref=e419]: 
+            - cell "" [ref=e420]:
+              - generic [ref=e422]: 
+          - row " Audit logs   " [ref=e423]:
+            - cell " Audit logs" [ref=e424]:
+              - generic [ref=e425]: 
+              - text: Audit logs
+            - cell "" [ref=e426]:
+              - generic [ref=e428]: 
+            - cell "" [ref=e429]:
+              - generic [ref=e431]: 
+            - cell "" [ref=e432]:
+              - generic [ref=e434]: 
+          - row " การสนับสนุน" [ref=e435]:
+            - cell " การสนับสนุน" [ref=e436]:
+              - generic [ref=e437]: 
+              - generic [ref=e438]: การสนับสนุน
+          - row " Email support   " [ref=e439]:
+            - cell " Email support" [ref=e440]:
+              - generic [ref=e441]: 
+              - text: Email support
+            - cell "" [ref=e442]:
+              - generic [ref=e444]: 
+            - cell "" [ref=e445]:
+              - generic [ref=e447]: 
+            - cell "" [ref=e448]:
+              - generic [ref=e450]: 
+          - row " Live chat   " [ref=e451]:
+            - cell " Live chat" [ref=e452]:
+              - generic [ref=e453]: 
+              - text: Live chat
+            - cell "" [ref=e454]:
+              - generic [ref=e456]: 
+            - cell "" [ref=e457]:
+              - generic [ref=e459]: 
+            - cell "" [ref=e460]:
+              - generic [ref=e462]: 
+          - row " 24/7 phone support   " [ref=e463]:
+            - cell " 24/7 phone support" [ref=e464]:
+              - generic [ref=e465]: 
+              - text: 24/7 phone support
+            - cell "" [ref=e466]:
+              - generic [ref=e468]: 
+            - cell "" [ref=e469]:
+              - generic [ref=e471]: 
+            - cell "" [ref=e472]:
+              - generic [ref=e474]: 
+          - row " Dedicated account manager   " [ref=e475]:
+            - cell " Dedicated account manager" [ref=e476]:
+              - generic [ref=e477]: 
+              - text: Dedicated account manager
+            - cell "" [ref=e478]:
+              - generic [ref=e480]: 
+            - cell "" [ref=e481]:
+              - generic [ref=e483]: 
+            - cell "" [ref=e484]:
+              - generic [ref=e486]: 
+          - row "เลือกแผนของคุณ  เลือกเบสิก  เลือกโปร  ติดต่อเรา" [ref=e487]:
+            - cell "เลือกแผนของคุณ" [ref=e488]
+            - cell " เลือกเบสิก" [ref=e489]:
+              - link " เลือกเบสิก" [ref=e490] [cursor=pointer]:
+                - /url: "#contact"
+                - generic [ref=e491]: 
+                - generic [ref=e492]: เลือกเบสิก
+            - cell " เลือกโปร" [ref=e493]:
+              - link " เลือกโปร" [ref=e494] [cursor=pointer]:
+                - /url: "#contact"
+                - generic [ref=e495]: 
+                - generic [ref=e496]: เลือกโปร
+            - cell " ติดต่อเรา" [ref=e497]:
+              - link " ติดต่อเรา" [ref=e498] [cursor=pointer]:
+                - /url: "#contact"
+                - generic [ref=e499]: 
+                - generic [ref=e500]: ติดต่อเรา
+  - generic [ref=e502]:
+    - generic [ref=e503]:
+      - generic [ref=e506]: พันธมิตรของเรา
+      - heading "จำนวนพันธมิตรที่เติบโตอย่างต่อเนื่อง" [level=2] [ref=e507]
+      - paragraph [ref=e508]: ติดตามการเติบโตของเครือข่ายพันธมิตรและผู้เข้าร่วมของเราแบบเรียลไทม์
+    - generic [ref=e509]:
+      - generic [ref=e511]:
+        - generic [ref=e513]: 
+        - generic [ref=e514]: พันธมิตรทั้งหมด
+        - generic [ref=e515]: "0"
+        - generic [ref=e516]:
+          - generic [ref=e517]: 
+          - generic [ref=e518]: +12.4% เดือนนี้
+      - generic [ref=e520]:
+        - generic [ref=e522]: 
+        - generic [ref=e523]: ผู้เข้าร่วมใหม่เดือนนี้
+        - generic [ref=e524]: "0"
+        - generic [ref=e525]:
+          - generic [ref=e526]: 
+          - generic [ref=e527]: +8.7% จากเดือนก่อน
+      - generic [ref=e529]:
+        - generic [ref=e531]: 
+        - generic [ref=e532]: อัตราการรักษาพันธมิตร
+        - generic [ref=e533]: "0"
+        - generic [ref=e534]:
+          - generic [ref=e535]: 
+          - generic [ref=e536]: +1.2% จากไตรมาสก่อน
+      - generic [ref=e538]:
+        - generic [ref=e540]: 
+        - generic [ref=e541]: ครอบคลุมประเทศ
+        - generic [ref=e542]: "0"
+        - generic [ref=e543]:
+          - generic [ref=e544]: 
+          - generic [ref=e545]: +3 ประเทศในปีนี้
+    - generic [ref=e546]:
+      - generic [ref=e547]:
+        - generic [ref=e548]:
+          - heading " แนวโน้มจำนวนผู้เข้าร่วม" [level=3] [ref=e549]:
+            - generic [ref=e550]: 
+            - text: แนวโน้มจำนวนผู้เข้าร่วม
+          - paragraph [ref=e551]: จำนวนพันธมิตรและผู้เข้าร่วมที่สมัครเข้ามาในแต่ละช่วงเวลา
+        - generic [ref=e552]:
+          - generic [ref=e555]: พันธมิตร
+          - generic [ref=e558]: ผู้เข้าร่วม
+      - tablist [ref=e559]:
+        - tab "6 เดือน" [ref=e560] [cursor=pointer]
+        - tab "1 ปี" [ref=e561] [cursor=pointer]
+        - tab "ทั้งหมด" [ref=e562] [cursor=pointer]
+      - generic [ref=e563]:
+        - img "Partner and participant growth line graph" [ref=e564]:
+          - generic [ref=e566]:
+            - generic [ref=e567]: 2,500
+            - generic [ref=e568]: 2,200
+            - generic [ref=e569]: 1,900
+            - generic [ref=e570]: 1,600
+            - generic [ref=e571]: 1,300
+            - generic [ref=e572]: 1,000
+        - tooltip:
+          - generic:
+            - generic: พันธมิตร
+            - generic: "0"
+          - generic:
+            - generic: ผู้เข้าร่วม
+            - generic: "0"
+      - generic [ref=e616]:
+        - generic [ref=e617]: ม.ค.
+        - generic [ref=e618]: มี.ค.
+        - generic [ref=e619]: พ.ค.
+        - generic [ref=e620]: ก.ค.
+        - generic [ref=e621]: ก.ย.
+        - generic [ref=e622]: พ.ย.
+        - generic [ref=e623]: ธ.ค.
+  - generic [ref=e626]:
+    - text:       
+    - generic [ref=e629]:
+      - generic [ref=e630]:
+        - heading "สมัครสมาชิก" [level=3] [ref=e631]
+        - paragraph [ref=e632]: กรอกข้อมูลด้านล่างเพื่อสร้างบัญชีของคุณ
+      - generic [ref=e633]:
+        - button "Sign up with Google" [ref=e634] [cursor=pointer]:
+          - generic [ref=e635]: 
+          - generic [ref=e636]: Google
+        - button "Sign up with Facebook" [ref=e637] [cursor=pointer]:
+          - generic [ref=e638]: 
+          - generic [ref=e639]: Facebook
+        - button "Sign up with Line" [ref=e640] [cursor=pointer]:
+          - generic [ref=e641]: 
+          - generic [ref=e642]: LINE
+      - generic [ref=e643]: หรือสมัครด้วยอีเมล
+      - generic [ref=e645]:
+        - generic [ref=e646]:
+          - generic [ref=e647]:
+            - generic [ref=e648]: 
+            - generic [ref=e649]: ชื่อ-นามสกุล
+            - generic [ref=e650]: "*"
+          - textbox " ชื่อ-นามสกุล *" [ref=e651]:
+            - /placeholder: เช่น สมชาย ใจดี
+        - generic [ref=e652]:
+          - generic [ref=e653]:
+            - generic [ref=e654]: 
+            - generic [ref=e655]: อีเมล
+            - generic [ref=e656]: "*"
+          - textbox " อีเมล *" [ref=e657]:
+            - /placeholder: name@company.com
+        - generic [ref=e658]:
+          - generic [ref=e659]:
+            - generic [ref=e660]: 
+            - generic [ref=e661]: เบอร์โทรศัพท์
+          - textbox " เบอร์โทรศัพท์" [ref=e662]:
+            - /placeholder: 08x-xxx-xxxx
+        - generic [ref=e663]:
+          - generic [ref=e664]:
+            - generic [ref=e665]: 
+            - generic [ref=e666]: ชื่อธุรกิจ/บริษัท
+            - generic [ref=e667]: "*"
+          - textbox " ชื่อธุรกิจ/บริษัท *" [ref=e668]:
+            - /placeholder: เช่น บริษัท คิวอัจฉริยะ จำกัด
+        - generic [ref=e669]:
+          - generic [ref=e670]:
+            - generic [ref=e671]: 
+            - generic [ref=e672]: รหัสผ่าน
+            - generic [ref=e673]: "*"
+          - generic [ref=e674]:
+            - textbox " รหัสผ่าน *" [ref=e675]:
+              - /placeholder: อย่างน้อย 8 ตัวอักษร
+            - button "Toggle password visibility" [ref=e676] [cursor=pointer]:
+              - generic [ref=e677]: 
+          - generic [ref=e684]: ความแข็งแรงของรหัสผ่าน
+        - generic [ref=e685]:
+          - generic [ref=e686]:
+            - generic [ref=e687]: 
+            - generic [ref=e688]: ยืนยันรหัสผ่าน
+            - generic [ref=e689]: "*"
+          - generic [ref=e690]:
+            - textbox " ยืนยันรหัสผ่าน *" [ref=e691]:
+              - /placeholder: กรอกรหัสผ่านอีกครั้ง
+            - button "Toggle confirm password visibility" [ref=e692] [cursor=pointer]:
+              - generic [ref=e693]: 
+        - generic [ref=e694]:
+          - generic [ref=e695]:
+            - generic [ref=e696]: 
+            - generic [ref=e697]: แผนที่สนใจ
+            - generic [ref=e698]: "*"
+          - combobox " แผนที่สนใจ *" [ref=e699]:
+            - option "เลือกแผนของคุณ" [disabled] [selected]
+            - option "เบสิก — ฿499/เดือน"
+            - option "โปร — ฿1,499/เดือน (แนะนำ)"
+            - option "องค์กร — ติดต่อเรา"
+        - generic [ref=e701]:
+          - checkbox "ฉันยอมรับ เงื่อนไขการใช้งาน และ นโยบายความเป็นส่วนตัว" [ref=e702] [cursor=pointer]
+          - generic [ref=e703] [cursor=pointer]:
+            - text: ฉันยอมรับ
+            - link "เงื่อนไขการใช้งาน" [ref=e704]:
+              - /url: "#"
+            - text: และ
+            - link "นโยบายความเป็นส่วนตัว" [ref=e705]:
+              - /url: "#"
+        - generic [ref=e706]:
+          - text: มีบัญชีอยู่แล้ว?
+          - link "เข้าสู่ระบบ" [ref=e707] [cursor=pointer]:
+            - /url: "#"
+  - contentinfo [ref=e708]:
+    - generic [ref=e709]:
+      - generic [ref=e710]:
+        - generic [ref=e713]: คิวอัจฉริยะ
+        - generic [ref=e714]:
+          - link "ความเป็นส่วนตัว" [ref=e715] [cursor=pointer]:
+            - /url: "#"
+          - link "เงื่อนไขการใช้งาน" [ref=e716] [cursor=pointer]:
+            - /url: "#"
+          - link "ติดต่อเรา" [ref=e717] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=e718]:
+          - link "" [ref=e719] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e720]: 
+          - link [ref=e721] [cursor=pointer]:
+            - /url: "#"
+          - link "" [ref=e722] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e723]: 
+          - link "" [ref=e724] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e725]: 
+      - separator [ref=e726]
+      - paragraph [ref=e727]: © 2026 Smart Queue. สงวนลิขสิทธิ์
