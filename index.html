@@ -55,6 +55,40 @@
                     <span class="brand-mark"><i class="fas fa-users-line"></i></span>
                     <span data-i18n data-th="คิวอัจฉริยะ" data-en="Smart Queue">คิวอัจฉริยะ</span>
                 </a>
+
+                <!-- Utility actions: theme toggle + language switcher.
+                     Placed BEFORE the navbar-toggler so they stay visible
+                     in the navbar header (on both mobile and desktop)
+                     without needing to open the collapse menu. -->
+                <div class="navbar-utility d-flex align-items-center">
+                    <button type="button" id="themeToggle" class="theme-toggle"
+                        aria-label="Toggle color theme" aria-pressed="false"
+                        title="Toggle theme">
+                        <i class="fas fa-sun theme-icon-sun" aria-hidden="true"></i>
+                        <i class="fas fa-moon theme-icon-moon" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown lang-switcher">
+                        <a class="nav-link aurora-nav-link aurora-lang-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language switcher">
+                            <i class="fas fa-globe"></i>
+                            <span id="currentLangLabel">TH</span>
+                            <i class="fas fa-chevron-down lang-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu aurora-dropdown dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li>
+                                <a class="dropdown-item lang-switch" href="#" data-lang="th">
+                                    <span class="flag">🇹🇭</span> ภาษาไทย
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item lang-switch" href="#" data-lang="en">
+                                    <span class="flag">🇬🇧</span> English
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 <button class="navbar-toggler aurora-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -85,34 +119,6 @@
                                 <i class="fas fa-rocket me-1"></i>
                                 <span data-i18n data-th="สมัครสมาชิก" data-en="Sign up">สมัครสมาชิก</span>
                             </a>
-                        </li>
-                        <li class="nav-item ms-lg-2">
-                            <button type="button" id="themeToggle" class="theme-toggle"
-                                aria-label="Toggle color theme" aria-pressed="false"
-                                title="Toggle theme">
-                                <i class="fas fa-sun theme-icon-sun" aria-hidden="true"></i>
-                                <i class="fas fa-moon theme-icon-moon" aria-hidden="true"></i>
-                            </button>
-                        </li>
-                        <li class="nav-item dropdown lang-switcher">
-                            <a class="nav-link aurora-nav-link aurora-lang-toggle" href="#" id="langDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false" aria-label="Language switcher">
-                                <i class="fas fa-globe"></i>
-                                <span id="currentLangLabel">TH</span>
-                                <i class="fas fa-chevron-down lang-caret"></i>
-                            </a>
-                            <ul class="dropdown-menu aurora-dropdown" aria-labelledby="langDropdown">
-                                <li>
-                                    <a class="dropdown-item lang-switch" href="#" data-lang="th">
-                                        <span class="flag">🇹🇭</span> ภาษาไทย
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item lang-switch" href="#" data-lang="en">
-                                        <span class="flag">🇬🇧</span> English
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </div>
