@@ -470,6 +470,48 @@ body {
     }
 }
 
+/* ==================== NAVBAR UTILITY (theme + lang) ==================== */
+/*
+ * The .navbar-utility wrapper holds the theme toggle and the language
+ * switcher. It is placed in the DOM BEFORE the .aurora-toggler so the
+ * two buttons stay accessible even when the collapse menu is closed
+ * (no need to open the hamburger on mobile).
+ *
+ * Visual order: brand → collapse → utility → toggler
+ * (achieved via the `order` property; the DOM order is
+ * brand → utility → toggler → collapse).
+ */
+.navbar-utility {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    order: 3;
+}
+
+.aurora-toggler {
+    /* Push the toggler to the very end of the flex row so the
+     * utility group can sit between the menu and the toggler. */
+    order: 4;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-utility {
+        /* On mobile, the collapse is hidden so there's no flex-grow
+         * to push the utility to the right. Use auto margin instead
+         * and leave a small gap before the toggler. */
+        margin-left: auto;
+        margin-right: 0.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-utility {
+        /* On desktop, the collapse already pushes the utility to the
+         * right via its flex-grow:1. Add a small gap from the menu. */
+        margin-left: 0.5rem;
+    }
+}
+
 /* ==================== THEME TOGGLE ==================== */
 .theme-toggle {
     background: var(--glass-bg);
